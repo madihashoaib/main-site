@@ -2,7 +2,7 @@ import type { CartItem } from "./CartContext";
 import { supabase } from "@/lib/supabaseClient";
 
 export const FREE_SHIPPING_OVER = 3000;
-export const SHIPPING_FEE = 200;
+export const SHIPPING_FEE = 0;
 
 export type CustomerInfo = {
   fullName: string;

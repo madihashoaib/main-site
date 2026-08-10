@@ -129,7 +129,7 @@ export default function ProductDetail({
 
             <div className="flex items-center gap-3 mb-6 text-sm">
               <Stars />
-              <span className="text-gray-500">4.8 · 24 reviews</span>
+              <span className="text-gray-500">4.8 </span>
             </div>
 
             <div className="text-2xl font-medium text-navy-deep mb-7">
@@ -185,9 +185,9 @@ export default function ProductDetail({
             {/* Trust row */}
             <div className="grid grid-cols-3 gap-3 text-center border-y border-gray-200 py-5 mb-8">
               {[
-                { t: "Free delivery", s: "Orders over Rs. 3,000" },
+                { t: "Free delivery" },
                 { t: "7-day returns", s: "Easy & hassle-free" },
-                { t: "Ships in 2–4 days", s: "Across Pakistan" }
+                { t: "Ships in 3-7 days", s: "Across Pakistan" }
               ].map((item) => (
                 <div key={item.t}>
                   <div className="text-[13px] font-medium text-navy-deep">{item.t}</div>

@@ -454,37 +454,37 @@ const categoryDetails: Record<
   Necklace: {
     blurb:
       "A necklace made to sit close to the heart — light enough for everyday, refined enough for the evenings that matter. Each chain is hand-finished so it lies flat and catches light with every movement.",
-    materials: ["brass", "Hypoallergenic", "Tarnish-resistant finish", "Adjustable chain"],
+    materials: ["Cubic Zirconia stones", "Non-irritating material", "Tarnish-resistant finish", "Adjustable chain"],
     care: "Keep away from water, perfume and lotion. Wipe gently with a soft cloth and store in the pouch provided.",
-    shipping: "Ships in 4-5 working days across Pakistan. Free delivery on orders over Rs. 3,000."
+    shipping: "Ships in 3-7 working days across Pakistan. Free delivery ."
   },
   Earrings: {
     blurb:
       "Earrings designed to frame the face without weighing it down. The posts are skin-friendly and secure, so they feel like nothing from morning meetings to midnight dinners.",
-    materials: ["Sterling silver posts", "Nickel-free", "Feather-light"],
+    materials: ["Sterling silver posts","Zirconia stones","Tarnish-resistant", "Feather-light"],
     care: "Remove before sleeping or showering. Store flat, away from moisture, to keep the shine.",
-    shipping: "Ships in 4-5 working days across Pakistan. Free delivery on orders over Rs. 3,000."
+    shipping: "Ships in 3-7 working days across Pakistan. Free delivery ."
   },
   Ring: {
     blurb:
       "A ring built to be stacked or worn alone — clean lines and a comfortable inner band that stays true wear after wear. A quiet statement for the hands that make things happen.",
-    materials: [ "Comfort-fit band", "Tarnish-resistant", "Water-safe plating"],
+    materials: [ "Comfort-fit band", "Tarnish-resistant", "Cubic Zirconia Stones"],
     care: "Take off before washing hands often or applying lotion. Polish with a soft cloth to restore shine.",
-    shipping: "Ships in 4-5 working days across Pakistan. Free delivery on orders over Rs. 3,000."
+    shipping: "Ships in 3-7 working days across Pakistan. Free delivery "
   },
   Bracelet: {
     blurb:
       "A bracelet that catches the light with every movement of the wrist — secure clasp, comfortable fit, and enough sparkle to dress up the simplest outfit.",
-    materials: [ "Secure lobster clasp", "Tarnish-resistant", "Adjustable length"],
+    materials: [ "Cubic Zirconia Stones", "Tarnish-resistant", "Adjustable length"],
     care: "Remove before washing hands, swimming or applying lotion. Store flat in the pouch provided.",
-    shipping: "Ships in 4-5 working days across Pakistan. Free delivery on orders over Rs. 3,000."
+    shipping: "Ships in 3-7 working days across Pakistan. Free delivery ."
   },
   Sets: {
     blurb:
       "A coordinated set so every piece is chosen to match — no guesswork pairing earrings with a necklace or ring. Put it on together and the look is complete.",
-    materials: ["brass", "Hypoallergenic", "Tarnish-resistant finish", "Matched finish across all pieces"],
+    materials: ["Cubic Zirconia Stones", "Non-irritating material", "Tarnish-resistant finish", "Matched finish across all pieces"],
     care: "Keep away from water, perfume and lotion. Wipe gently with a soft cloth and store in the pouch provided.",
-    shipping: "Ships in 4-5 working days across Pakistan. Free delivery on orders over Rs. 3,000."
+    shipping: "Ships in 3-7 working days across Pakistan. Free delivery "
   }
 };
 

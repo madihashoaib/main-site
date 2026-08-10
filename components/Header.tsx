@@ -17,11 +17,10 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Home page has a dark hero right under the header, so white text stays
-  // readable there. Every other page has a light/ivory background, so we
-  // switch to dark navy text unless the header has its own dark background
-  // (scrolled state).
-  const textColor = scrolled || isHome ? "text-navy-deep" : "text-navy-deep";
+  // Header background is transparent/light at the top on every page (hero
+  // image is light-toned), so text stays dark navy there. Once scrolled,
+  // the header gets a solid dark navy background, so text switches to white.
+  const textColor = scrolled ? "text-ivory" : "text-navy-deep";
 
   return (
     <header

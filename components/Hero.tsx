@@ -25,10 +25,13 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative overflow-hidden bg-ivory md:min-h-screen">
       {/* ============ full-bleed background photo — place hero-flatlay.png
-          in /public/images/ (same file shared in chat). bg-top keeps the
-          empty linen area at the top in view even on wide screens. ============ */}
+          in /public/images/ (same file shared in chat). On mobile the
+          section height now follows the content (not a forced full-screen
+          height), so bg-cover doesn't need to upscale the photo as much —
+          the picture stays sharp and fills the whole hero area, right down
+          to the Shop Collection button. ============ */}
       <div
         className="absolute inset-0 bg-cover bg-top md:bg-[center_top_-40px]"
         style={{ backgroundImage: "url(/images/hero-flatlay.jfif)" }}
@@ -50,7 +53,7 @@ export default function Hero() {
 
       {/* ============ text — sits in the quiet, empty part of the photo
           near the top ============ */}
-      <div className="relative z-10 max-w-2xl mx-auto px-6 pt-24 md:pt-28 pb-10 text-center flex flex-col items-center">
+      <div className="relative z-10 max-w-2xl mx-auto px-6 pt-24 md:pt-28 pb-6 md:pb-10 text-center flex flex-col items-center">
         <span className="tracking-[5px] text-xs uppercase font-medium mb-5 inline-block" style={{ color: "#A8455A" }}>
           Jewelry &amp; Home Living Products
         </span>

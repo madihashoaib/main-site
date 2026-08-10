@@ -2,15 +2,15 @@ import Reveal from "./Reveal";
 
 const REVIEWS = [
   {
-    name: "Ayesha K.",
+    name: "Ayesha Khan",
     initial: "A",
     rating: 5,
     date: "2 weeks ago",
     purchased: "Necklace Set",
-    text: "Ordered the butterfly necklace set for my cousin's mehndi and everyone kept asking where it was from. Packaging was so pretty I almost didn't want to open it."
+    text: "Ordered the butterfly wing necklace set for my cousin's mehndi and everyone kept asking where it was from"
   },
   {
-    name: "Hina R.",
+    name: "Hina Rizwan",
     initial: "H",
     rating: 5,
     date: "1 month ago",
@@ -18,7 +18,7 @@ const REVIEWS = [
     text: "Ring bilkul waisi hi aayi jaisi pictures mein thi, quality bhi achi hai. Colour abhi tak fade nahi hua. Sabko recommend karungi!"
   },
   {
-    name: "Sana M.",
+    name: "Sana Malik",
     initial: "S",
     rating: 4,
     date: "3 weeks ago",
@@ -26,15 +26,15 @@ const REVIEWS = [
     text: "Earrings are gorgeous, exactly like the photos. Delivery took an extra 2 days but honestly, worth the wait."
   },
   {
-    name: "Fatima A.",
+    name: "Fatima Alvi",
     initial: "F",
     rating: 5,
     date: "5 days ago",
     purchased: "Bracelet",
-    text: "This is my 3rd order and still zero complaints. Doesn't turn my wrist green like the cheap stuff I used to get from bazaars."
+    text: "This is my 2nd order and still zero complaints. Doesn't turn my wrist green like the cheap stuff I used to get from bazaars."
   },
   {
-    name: "Zainab H.",
+    name: "Zainab Hafeez",
     initial: "Z",
     rating: 5,
     date: "1 week ago",
@@ -42,12 +42,20 @@ const REVIEWS = [
     text: "Bohat pyari earrings hain aur delivery bhi jaldi hogayi thi. Thank you!"
   },
   {
-    name: "Mahnoor S.",
+    name: "Mahnoor ",
     initial: "M",
     rating: 4,
-    date: "2 months ago",
+    date: "1 month ago",
     purchased: "Bracelet",
-    text: "Good quality for the price. One stone felt a little loose when it arrived — messaged their Insta and they replaced it no questions asked."
+    text: "Very nice bracelet , resonable b bht hai mn expect ni kr ri thi kay quality itni achi hogi or abhi tk fade ni hua."
+  },
+  {
+    name: "Anabia",
+    initial: "A",
+    rating: 5,
+    date: " 1 week ago",
+    purchased: "Necklace Set",
+    text: "bht unique jewelry hai quality b bht kamal ki hai i really love it and totally recommended."
   }
 ];
 
