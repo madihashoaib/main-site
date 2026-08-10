@@ -57,7 +57,7 @@ export default function Hero() {
         <span className="tracking-[5px] text-xs uppercase font-medium mb-5 inline-block" style={{ color: "#A8455A" }}>
           Jewelry &amp; Home Living Products
         </span>
-        <h1 className="font-serif italic font-medium text-navy-deep leading-[1.1] mb-5 text-[clamp(30px,4.4vw,50px)]">
+        <h1 className="font-serif italic font-medium text-navy-deep leading-[1.1] mb-8 text-[clamp(30px,4.4vw,50px)]">
           Adorn every{" "}
           <span className="text-gold" style={{ textShadow: "0 0 30px rgba(201,162,39,0.25)" }}>
             moment
@@ -65,11 +65,6 @@ export default function Hero() {
           <br />
           with quiet luxury
         </h1>
-        <p className="text-navy-deep/70 text-sm md:text-base leading-7 max-w-sm mb-7">
-          Handpicked jewelry and home accents crafted for the woman who
-          notices detail — where every piece is designed to be looked at
-          twice.
-        </p>
 
         <div className="flex flex-wrap items-center justify-center gap-5">
           <a
