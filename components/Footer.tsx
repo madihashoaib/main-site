@@ -35,8 +35,8 @@ export default function Footer() {
           <h4 className="text-white text-sm tracking-wider uppercase mb-5">Follow</h4>
           <ul className="space-y-2 text-sm">
             <li><a href="https://www.instagram.com/adornnadobe?igsh=aWVrZHhveDdzeTRr" target="_blank" rel="noopener noreferrer" className="hover:text-gold-light transition">Instagram</a></li>
-            <li><a href="#" className="hover:text-gold-light transition">Facebook</a></li>
-            <li><a href="#" className="hover:text-gold-light transition">TikTok</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61592853789016" target="_blank" rel="noopener noreferrer" className="hover:text-gold-light transition">Facebook</a></li>
+            
           </ul>
         </div>
       </div>
