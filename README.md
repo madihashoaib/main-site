@@ -1,4 +1,4 @@
-# adorn N adobe — E-commerce Website
+#  — E-commerce Website
 
 Next.js 14 (App Router) + Tailwind CSS project. Navy-gold brand theme, 3D tilt product cards.
 
