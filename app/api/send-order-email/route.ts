@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
 
     const html = `
       <div style="font-family: sans-serif; max-width:600px; margin:auto;">
-        <h2 style="color:#1a2b4c;">Adorn N Adobe</h2>
+        <h2 style="color:#1a2b4c;">Adorn & Adobe</h2>
         <p>Hi ${order.customer.fullName},</p>
         <p>Thank you for your order! Here are the details:</p>
         <p><strong>Order ID:</strong> ${order.id}</p>
@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
     `;
 
     const { data, error } = await resend.emails.send({
-      from: "Adorn N Adobe <onboarding@resend.dev>",
+      from: "Adorn & Adobe <onboarding@resend.dev>",
       to: order.customer.email,
       subject: `Order Confirmed - #${order.id}`,
       html,
