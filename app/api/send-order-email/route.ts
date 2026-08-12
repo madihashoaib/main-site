@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
     `;
 
     const { data, error } = await resend.emails.send({
-      from: "Adorn N Adobe <onboarding@resend.dev>",
+      from: "Adorn & Adobe <onboarding@resend.dev>",
       to: order.customer.email,
       subject: `Order Confirmed - #${order.id}`,
       html,
