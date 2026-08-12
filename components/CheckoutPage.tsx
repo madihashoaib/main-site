@@ -110,6 +110,14 @@ export default function CheckoutPage() {
     } catch {
       /* network/DB issue — local order already saved */
     }
+    // send order confirmation email (non-blocking — order already placed either way)
+    fetch("/api/send-order-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(order)
+    }).catch(() => {
+      /* email failed — order still went through fine */
+    });
     clear();
     router.push("/order-confirmed");
   };
