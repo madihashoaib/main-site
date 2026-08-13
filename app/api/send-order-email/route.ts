@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
     const { data, error } = await resend.emails.send({
       from: "Adorn & Adobe <orders@adornnadobe.pk>",
       to: order.customer.email,
-      reply_to: "adornnadobe@gmail.com",
+     replyTo: "adornnadobe@gmail.com",
       subject: `Order Confirmed - #${order.id}`,
       html,
     });
