@@ -441,6 +441,77 @@ export const products: Product[] = [
       "/images/products/Silver-Tone-Zircon-Floral-Cluster-Station-Bracelet-1.jpeg"
     ],
     description: "A dainty station bracelet with floral zircon clusters spaced evenly along a delicate chain. Understated sparkle that layers beautifully with other bracelets or watches."
+  },
+  {
+    id: "30",
+    name: "floral-enamel-pave-pendant-set",
+    category: "Sets",
+    price: "Rs. 999",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
+    priceValue: 999,                // TODO: sirf number, e.g. 1850
+    shape: "circle",
+    order: 30,
+    images: [
+      "/images/products/floral-enamel-pave-pendant-set.jpeg",
+      "/images/products/floral-enamel-pave-pendant-set-2.jpeg"
+    ],
+    description: "A charming gold-plated necklace and earring set featuring delicate blooming daisy motifs, shimmering pavé-set crystals, and soft green enamel leaf accents. Designed with a timeless pearl center, this lightweight floral ensemble adds a romantic, nature-inspired touch to both everyday wear and special occasions."
+  },
+  {
+    id: "31",
+    name: "marquise-feathered-swan-necklace",
+    category: "Sets",
+    price: "Rs. 699",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
+    priceValue: 699,                // TODO: sirf number, e.g. 1850
+    shape: "arch",
+    order: 31,
+    images: [
+      "/images/products/marquise-feathered-swan-necklace.jpeg",
+      "/images/products/marquise-feathered-swan-necklace-2.jpeg"
+    ],
+    description: "A graceful silver-tone necklace featuring an intricate swan pendant with sparkling marquise-cut crystal feathers. Detailed with a delicate, accent-lined chain, this piece brings a touch of timeless elegance and brilliant shine to any outfit."
+  },
+  {
+    id: "32",
+    name: "multicolor-gemstone-huggie-hoops",
+    category: "Earrings",
+    price: "Rs. 649",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
+    priceValue: 649,                // TODO: sirf number, e.g. 1850
+    shape: "circle",
+    order: 32,
+    images: [
+      "/images/products/multicolor-gemstone-huggie-hoops.jpeg",
+      "/images/products/multicolor-gemstone-huggie-hoops-2.jpeg"
+    ],
+    description: "A vibrant array of multicolored gemstones set in huggie-style hoops, offering a playful yet sophisticated look that complements any ensemble."
+  },
+  {
+    id: "33",
+    name: "textured-gold-pave-open-cuff-ring",
+    category: "Ring",
+    price: "Rs. 499",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
+    priceValue: 499,                // TODO: sirf number, e.g. 1850
+    shape: "circle",
+    order: 33,
+    images: [
+      "/images/products/textured-gold-pave-open-cuff-ring.jpeg",
+      "/images/products/textured-gold-pave-open-cuff-ring-2.jpeg"
+    ],
+    description: "A textured gold pave open cuff ring, featuring intricate detailing and a secure fit that complements any ensemble."
+  },
+  {
+    id: "34",
+    name: "Silver-leaf-vine-earrings",
+    category: "Earrings",
+    price: "Rs. 1099",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
+    priceValue: 1099,                // TODO: sirf number, e.g. 1850
+    shape: "arch",
+    order: 34,
+    images: [
+      "/images/products/silver-leaf-vine-earrings.jpeg",
+      "/images/products/silver-leaf-vine-earrings-2.jpeg",
+      "/images/products/silver-leaf-vine-earrings-3.jpeg"
+    ],
+    description: "Earrings featuring a silver leaf design with intricate vine detailing, offering a elegant and sophisticated look that complements any ensemble."
   }
 ];
 
