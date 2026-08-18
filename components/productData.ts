@@ -18,6 +18,10 @@ export type Product = {
   images?: string[];
   /** Optional hand-written copy; if omitted, category defaults are used. */
   description?: string;
+  /** Optional custom materials list; if omitted, category defaults are used.
+   *  Use this when a specific product's real materials differ from the
+   *  usual category ones (e.g. a Ring with no zircon stones). */
+  materials?: string[];
 };
 
 export const products: Product[] = [
@@ -441,6 +445,98 @@ export const products: Product[] = [
       "/images/products/Silver-Tone-Zircon-Floral-Cluster-Station-Bracelet-1.jpeg"
     ],
     description: "A dainty station bracelet with floral zircon clusters spaced evenly along a delicate chain. Understated sparkle that layers beautifully with other bracelets or watches."
+  },
+
+  // ===================================================================
+  // ↓↓↓ NAYE PRODUCTS — Maryam k new products ↓↓↓
+  // ===================================================================
+  {
+    id: "30",
+    name: "Gold Zircon Spiral Drop Earrings",
+    category: "Earrings",
+    price: "Rs. 1,299",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
+    priceValue: 1299,                // TODO: sirf number, e.g. 1850
+    shape: "drop",
+    order: 30,
+    images: [
+      "/images/products/Gold Zircon Spiral Drop Earrings.jpeg",
+      "/images/products/Gold Zircon Spiral Drop Earrings-1.jpeg"
+    ],
+    description: "Gold-tone spiral drop earrings lined with sparkling zircon stones. A fluid, swirling shape that catches the light with every turn of the head — easy to dress up or down."
+  },
+  {
+    id: "31",
+    name: "Modern Minimalist Gold Ring Trio",
+    category: "Ring",
+    price: "Rs. 999",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
+    priceValue: 999,                // TODO: sirf number, e.g. 1850
+    shape: "band",
+    order: 31,
+    images: [
+      "/images/products/Modern Minimalist Gold Ring Trio.jpeg",
+      "/images/products/Modern Minimalist Gold Ring Trio-1.jpeg",
+      "/images/products/Modern Minimalist Gold Ring Trio-2.jpeg"
+    ],
+    description: "A set of three slim, minimalist gold-tone rings meant to be stacked or worn separately. Clean lines with no fuss, perfect for everyday layering.",
+    materials: ["Stainless steel", "Tarnish-resistant", "Comfort-fit band"]
+  },
+  {
+    id: "32",
+    name: "Royal Blue Pure Zircon Statement Studs",
+    category: "Earrings",
+    price: "Rs. 1,550",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
+    priceValue: 1550,                // TODO: sirf number, e.g. 1850
+    shape: "circle",
+    order: 32,
+    images: [
+      "/images/products/Royal Blue Starburst Statement Studs.jpeg",
+      "/images/products/Royal Blue Starburst Statement Studs-1.jpeg"
+    ],
+    description: "Bold starburst stud earrings set with rich royal blue stones. A vivid pop of colour designed to stand out, ideal for evening looks and festive wear."
+  },
+  {
+    id: "33",
+    name: "Silver Floral Zircon Band",
+    category: "Ring",
+    price: "Rs. 1,050",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
+    priceValue: 1050,                // TODO: sirf number, e.g. 1850
+    shape: "band",
+    order: 33,
+    images: [
+      "/images/products/Silver Floral Zircon Band.jpeg",
+      "/images/products/Silver Floral Zircon Band-1.jpeg",
+      "/images/products/Silver Floral Zircon Band-2.jpeg",
+      "/images/products/Silver Floral Zircon Band-3.jpeg"
+    ],
+    description: "A silver-tone band ring with a delicate floral zircon design. Understated and versatile, it's an easy everyday piece that still carries a bit of sparkle."
+  },
+  {
+    id: "34",
+    name: "Sweetheart Adjustable Silver Ring",
+    category: "Ring",
+    price: "Rs. 1,050",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
+    priceValue: 1050,                // TODO: sirf number, e.g. 1850
+    shape: "band",
+    order: 34,
+    images: [
+      "/images/products/Sweetheart Adjustable Silver Ring.jpeg",
+      "/images/products/Sweetheart Adjustable Silver Ring-1.jpeg"
+    ],
+    description: "A sweet heart-shaped silver-tone ring on a flexible, adjustable band. Comfortable and one-size-fits-most, making it a simple everyday favourite."
+  },
+  {
+    id: "35",
+    name: "Triple Tier Pink Zircon Charm Set",
+    category: "Necklace",
+    price: "Rs. 1,899",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
+    priceValue: 1899,                // TODO: sirf number, e.g. 1850
+    shape: "arch",
+    order: 35,
+    images: [
+      "/images/products/Triple Tier Pink Zircon Charm Set.jpeg",
+      "/images/products/Triple Tier Pink Zircon Charm Set-1.jpeg"
+    ],
+    description: "A layered necklace set with three tiers of delicate chains, each finished with a soft pink zircon charm. Romantic and light, it adds gentle dimension to any neckline."
   }
 ];
 
@@ -508,7 +604,7 @@ export function getProductCopy(product: Product) {
   const base = categoryDetails[product.category];
   return {
     description: product.description ?? base.blurb,
-    materials: base.materials,
+    materials: product.materials ?? base.materials,
     care: base.care,
     shipping: base.shipping
   };
