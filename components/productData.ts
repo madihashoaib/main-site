@@ -18,6 +18,10 @@ export type Product = {
   images?: string[];
   /** Optional hand-written copy; if omitted, category defaults are used. */
   description?: string;
+  /** Optional custom materials list; if omitted, category defaults are used.
+   *  Use this when a specific product's real materials differ from the
+   *  usual category ones (e.g. a Ring with no zircon stones). */
+  materials?: string[];
 };
 
 export const products: Product[] = [
@@ -25,8 +29,8 @@ export const products: Product[] = [
     id: "1",
     name: "Antique Gold Floral Vine Dangle Earrings With Pink Pavé Blossom",
     category: "Earrings",
-    price: "Rs. 1500",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1500,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1500",
+    priceValue: 1500,
     shape: "drop",
     order: 18,
     images: [
@@ -40,8 +44,8 @@ export const products: Product[] = [
     id: "2",
     name: "Antique Gold Kundan Floral Vine Earrings And Tikka Set",
     category: "Earrings",
-    price: "Rs. 1850",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1850,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1850",
+    priceValue: 1850,
     shape: "drop",
     order: 17,
     images: [
@@ -56,8 +60,8 @@ export const products: Product[] = [
     id: "3",
     name: "Crown Motif Oval Halo Zircon Tennis Bracelet",
     category: "Bracelet",
-    price: "Rs. 1450",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1450,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1450",
+    priceValue: 1450,
     shape: "circle",
     order: 16,
     images: [
@@ -71,8 +75,8 @@ export const products: Product[] = [
     id: "4",
     name: "Floral Green Ring",
     category: "Ring",
-    price: "Rs. 1350",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1350,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1350",
+    priceValue: 1350,
     shape: "band",
     order: 15,
     images: [
@@ -86,8 +90,8 @@ export const products: Product[] = [
     id: "5",
     name: "Gold Pavé Floral Teardrop Dangle Earrings",
     category: "Earrings",
-    price: "Rs. 1450",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1450,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1450",
+    priceValue: 1450,
     shape: "drop",
     order: 14,
     images: [
@@ -99,8 +103,8 @@ export const products: Product[] = [
     id: "6",
     name: "Gold Tone Geometric Rectangular Bar Link Bracelet",
     category: "Bracelet",
-    price: "Rs. 1400",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1400,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1400",
+    priceValue: 1400,
     shape: "circle",
     order: 13,
     images: [
@@ -114,8 +118,8 @@ export const products: Product[] = [
     id: "7",
     name: "Golden Tone Geometric Rhombus Floral Dangle Earrings",
     category: "Earrings",
-    price: "Rs. 1150",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1150,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1150",
+    priceValue: 1150,
     shape: "drop",
     order: 12,
     images: [
@@ -127,8 +131,8 @@ export const products: Product[] = [
     id: "8",
     name: "Multicolor Zircon Cluster Cocktail Ring",
     category: "Ring",
-    price: "Rs. 1350",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1350,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1350",
+    priceValue: 1350,
     shape: "band",
     order: 11,
     images: [
@@ -141,8 +145,8 @@ export const products: Product[] = [
     id: "9",
     name: "Pink And Champagne Floral Cluster Cocktail Ring",
     category: "Ring",
-    price: "Rs. 1000",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1000,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1000",
+    priceValue: 1000,
     shape: "band",
     order: 10,
     images: [
@@ -155,8 +159,8 @@ export const products: Product[] = [
     id: "10",
     name: "Rose Gold Champagne Zircon Solitaire With Pavé Cluster Ring",
     category: "Ring",
-    price: "Rs. 1500",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1500,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1500",
+    priceValue: 1500,
     shape: "band",
     order: 9,
     images: [
@@ -170,8 +174,8 @@ export const products: Product[] = [
     id: "11",
     name: "Rose Gold Red Zircon Solitaire With Pavé Cluster Ring",
     category: "Ring",
-    price: "Rs. 1500",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1500,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1500",
+    priceValue: 1500,
     shape: "band",
     order: 8,
     images: [
@@ -185,8 +189,8 @@ export const products: Product[] = [
     id: "12",
     name: "Silver Floral Pavé Zircon Drop Earrings With Purple Stone Cluster",
     category: "Earrings",
-    price: "Rs. 2250",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 2250,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 2250",
+    priceValue: 2250,
     shape: "drop",
     order: 7,
     images: [
@@ -198,8 +202,8 @@ export const products: Product[] = [
     id: "13",
     name: "Silver Green Emerald Halo Stud Earrings And Ring Set",
     category: "Earrings",
-    price: "Rs. 1600",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1600,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1600",
+    priceValue: 1600,
     shape: "circle",
     order: 6,
     images: [
@@ -212,8 +216,8 @@ export const products: Product[] = [
     id: "14",
     name: "Silver Pavé Floral Teardrop Dangle Earrings",
     category: "Earrings",
-    price: "Rs. 1450",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1450,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1450",
+    priceValue: 1450,
     shape: "drop",
     order: 5,
     images: [
@@ -225,8 +229,8 @@ export const products: Product[] = [
     id: "15",
     name: "Silver Solitaire Ring With Baguette Cut Zircon Band",
     category: "Ring",
-    price: "Rs. 1150",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1150,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1150",
+    priceValue: 1150,
     shape: "band",
     order: 4,
     images: [
@@ -238,8 +242,8 @@ export const products: Product[] = [
     id: "16",
     name: "Silver Tone Geometric Rhombus Floral Dangle Earrings",
     category: "Earrings",
-    price: "Rs. 1150",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1150,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1150",
+    priceValue: 1150,
     shape: "drop",
     order: 3,
     images: [
@@ -251,8 +255,8 @@ export const products: Product[] = [
     id: "17",
     name: "Two Tone Zirconia Floral Earrings With Champagne Accents",
     category: "Earrings",
-    price: "Rs. 2250",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 2250,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 2250",
+    priceValue: 2250,
     shape: "drop",
     order: 2,
     images: [
@@ -265,8 +269,8 @@ export const products: Product[] = [
     id: "18",
     name: "White Floral Zircon Ring",
     category: "Ring",
-    price: "Rs. 1350",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1350,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1350",
+    priceValue: 1350,
     shape: "band",
     order: 1,
     images: [
@@ -286,8 +290,8 @@ export const products: Product[] = [
     id: "19",
     name: "Gold Tone Pavé Lotus Flower Pendant, Earrings And Ring Set",
     category: "Sets",
-    price: "Rs. 3,000",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 3000,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 3,000",
+    priceValue: 3000,
     shape: "arch",
     order: 19,
     images: [
@@ -301,8 +305,8 @@ export const products: Product[] = [
     id: "20",
     name: "Silver Tone Black Square Zircon Halo Drop Necklace And Earrings Set",
     category: "Sets",
-    price: "Rs. 3,800",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 3800,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 3,800",
+    priceValue: 3800,
     shape: "arch",
     order: 20,
     images: [
@@ -315,8 +319,8 @@ export const products: Product[] = [
     id: "21",
     name: "Silver Tone Mint Green Zircon Heart Motif Necklace And Earrings Set",
     category: "Sets",
-    price: "Rs. 4,000",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 4000,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 4,000",
+    priceValue: 4000,
     shape: "arch",
     order: 21,
     images: [
@@ -330,8 +334,8 @@ export const products: Product[] = [
     id: "22",
     name: "Silver Tone Pavé Lotus Flower Pendant, Earrings And Ring Set",
     category: "Sets",
-    price: "Rs. 3,000",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 3000,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 3,000",
+    priceValue: 3000,
     shape: "arch",
     order: 22,
     images: [
@@ -344,8 +348,8 @@ export const products: Product[] = [
     id: "23",
     name: "Silver Tone Pavé Zircon Floral Cluster Necklace And Earrings Set",
     category: "Sets",
-    price: "Rs. 3,000",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 3000,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 3,000",
+    priceValue: 3000,
     shape: "arch",
     order: 23,
     images: [
@@ -359,8 +363,8 @@ export const products: Product[] = [
     id: "24",
     name: "Silver Tone Pavé Zircon Teardrop Pendant And Earrings Set",
     category: "Sets",
-    price: "Rs. 2,500",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 2500,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 2,500",
+    priceValue: 2500,
     shape: "arch",
     order: 24,
     images: [
@@ -373,8 +377,8 @@ export const products: Product[] = [
     id: "25",
     name: "Silver Tone Red Rectangular Zircon Halo Necklace And Earrings Set",
     category: "Sets",
-    price: "Rs. 2,800",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 2800,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 2,800",
+    priceValue: 2800,
     shape: "arch",
     order: 25,
     images: [
@@ -388,8 +392,8 @@ export const products: Product[] = [
     id: "26",
     name: "Silver Tone White Rectangular Zircon Halo Necklace And Earrings Set",
     category: "Sets",
-    price: "Rs. 2,800",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 2800,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 2,800",
+    priceValue: 2800,
     shape: "arch",
     order: 26,
     images: [
@@ -402,8 +406,8 @@ export const products: Product[] = [
     id: "27",
     name: "Silver Tone Zircon Butterfly Wing Necklace And Earrings Set",
     category: "Sets",
-    price: "Rs. 2,200",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 2200,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 2,200",
+    priceValue: 2200,
     shape: "arch",
     order: 27,
     images: [
@@ -418,8 +422,8 @@ export const products: Product[] = [
     id: "28",
     name: "Silver Tone Zircon Double Floral Cluster Bypass Adjustable Ring",
     category: "Ring",
-    price: "Rs. 899",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 899,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 899",
+    priceValue: 899,
     shape: "band",
     order: 28,
     images: [
@@ -432,8 +436,8 @@ export const products: Product[] = [
     id: "29",
     name: "Silver Tone Zircon Floral Cluster Station Bracelet",
     category: "Bracelet",
-    price: "Rs. 1,399",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1399,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1,399",
+    priceValue: 1399,
     shape: "circle",
     order: 29,
     images: [
@@ -446,8 +450,8 @@ export const products: Product[] = [
     id: "30",
     name: "floral-enamel-pave-pendant-set",
     category: "Sets",
-    price: "Rs. 999",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 999,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 999",
+    priceValue: 999,
     shape: "circle",
     order: 30,
     images: [
@@ -460,8 +464,8 @@ export const products: Product[] = [
     id: "31",
     name: "marquise-feathered-swan-necklace",
     category: "Sets",
-    price: "Rs. 699",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 699,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 699",
+    priceValue: 699,
     shape: "arch",
     order: 31,
     images: [
@@ -474,8 +478,8 @@ export const products: Product[] = [
     id: "32",
     name: "multicolor-gemstone-huggie-hoops",
     category: "Earrings",
-    price: "Rs. 649",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 649,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 649",
+    priceValue: 649,
     shape: "circle",
     order: 32,
     images: [
@@ -488,8 +492,8 @@ export const products: Product[] = [
     id: "33",
     name: "textured-gold-pave-open-cuff-ring",
     category: "Ring",
-    price: "Rs. 499",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 499,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 499",
+    priceValue: 499,
     shape: "circle",
     order: 33,
     images: [
@@ -502,8 +506,8 @@ export const products: Product[] = [
     id: "34",
     name: "Silver-leaf-vine-earrings",
     category: "Earrings",
-    price: "Rs. 1099",              // TODO: apna price yahan likho, e.g. "Rs. 1,850"
-    priceValue: 1099,                // TODO: sirf number, e.g. 1850
+    price: "Rs. 1099",
+    priceValue: 1099,
     shape: "arch",
     order: 34,
     images: [
@@ -512,6 +516,98 @@ export const products: Product[] = [
       "/images/products/silver-leaf-vine-earrings-3.jpeg"
     ],
     description: "Earrings featuring a silver leaf design with intricate vine detailing, offering a elegant and sophisticated look that complements any ensemble."
+  },
+
+  // ===================================================================
+  // ↓↓↓ NAYE PRODUCTS — Maryam k new products ↓↓↓
+  // ===================================================================
+  {
+    id: "35",
+    name: "Gold Zircon Spiral Drop Earrings",
+    category: "Earrings",
+    price: "Rs. 1,299",
+    priceValue: 1299,
+    shape: "drop",
+    order: 35,
+    images: [
+      "/images/products/Gold Zircon Spiral Drop Earrings.jpeg",
+      "/images/products/Gold Zircon Spiral Drop Earrings-1.jpeg"
+    ],
+    description: "Gold-tone spiral drop earrings lined with sparkling zircon stones. A fluid, swirling shape that catches the light with every turn of the head — easy to dress up or down."
+  },
+  {
+    id: "36",
+    name: "Modern Minimalist Gold Ring Trio",
+    category: "Ring",
+    price: "Rs. 999",
+    priceValue: 999,
+    shape: "band",
+    order: 36,
+    images: [
+      "/images/products/Modern Minimalist Gold Ring Trio.jpeg",
+      "/images/products/Modern Minimalist Gold Ring Trio-1.jpeg",
+      "/images/products/Modern Minimalist Gold Ring Trio-2.jpeg"
+    ],
+    description: "A set of three slim, minimalist gold-tone rings meant to be stacked or worn separately. Clean lines with no fuss, perfect for everyday layering.",
+    materials: ["Stainless steel", "Tarnish-resistant", "Comfort-fit band"]
+  },
+  {
+    id: "37",
+    name: "Royal Blue Pure Zircon Statement Studs",
+    category: "Earrings",
+    price: "Rs. 1,550",
+    priceValue: 1550,
+    shape: "circle",
+    order: 37,
+    images: [
+      "/images/products/Royal Blue Starburst Statement Studs.jpeg",
+      "/images/products/Royal Blue Starburst Statement Studs-1.jpeg"
+    ],
+    description: "Bold starburst stud earrings set with rich royal blue stones. A vivid pop of colour designed to stand out, ideal for evening looks and festive wear."
+  },
+  {
+    id: "38",
+    name: "Silver Floral Zircon Band",
+    category: "Ring",
+    price: "Rs. 1,050",
+    priceValue: 1050,
+    shape: "band",
+    order: 38,
+    images: [
+      "/images/products/Silver Floral Zircon Band.jpeg",
+      "/images/products/Silver Floral Zircon Band-1.jpeg",
+      "/images/products/Silver Floral Zircon Band-2.jpeg",
+      "/images/products/Silver Floral Zircon Band-3.jpeg"
+    ],
+    description: "A silver-tone band ring with a delicate floral zircon design. Understated and versatile, it's an easy everyday piece that still carries a bit of sparkle."
+  },
+  {
+    id: "39",
+    name: "Sweetheart Adjustable Silver Ring",
+    category: "Ring",
+    price: "Rs. 1,050",
+    priceValue: 1050,
+    shape: "band",
+    order: 39,
+    images: [
+      "/images/products/Sweetheart Adjustable Silver Ring.jpeg",
+      "/images/products/Sweetheart Adjustable Silver Ring-1.jpeg"
+    ],
+    description: "A sweet heart-shaped silver-tone ring on a flexible, adjustable band. Comfortable and one-size-fits-most, making it a simple everyday favourite."
+  },
+  {
+    id: "40",
+    name: "Triple Tier Pink Zircon Charm Set",
+    category: "Necklace",
+    price: "Rs. 1,899",
+    priceValue: 1899,
+    shape: "arch",
+    order: 40,
+    images: [
+      "/images/products/Triple Tier Pink Zircon Charm Set.jpeg",
+      "/images/products/Triple Tier Pink Zircon Charm Set-1.jpeg"
+    ],
+    description: "A layered necklace set with three tiers of delicate chains, each finished with a soft pink zircon charm. Romantic and light, it adds gentle dimension to any neckline."
   }
 ];
 
@@ -579,7 +675,7 @@ export function getProductCopy(product: Product) {
   const base = categoryDetails[product.category];
   return {
     description: product.description ?? base.blurb,
-    materials: base.materials,
+    materials: product.materials ?? base.materials,
     care: base.care,
     shipping: base.shipping
   };
