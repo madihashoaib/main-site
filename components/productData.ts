@@ -511,9 +511,9 @@ export const products: Product[] = [
     shape: "arch",
     order: 34,
     images: [
-      "/images/products/silver-leaf-vine-earrings.jpeg",
-      "/images/products/silver-leaf-vine-earrings-2.jpeg",
-      "/images/products/silver-leaf-vine-earrings-3.jpeg"
+      "/images/products/Silver-leaf-vine-earrings.jpeg",
+      "/images/products/Silver-leaf-vine-earrings-2.jpeg",
+      "/images/products/Silver-leaf-vine-earrings-3.jpeg"
     ],
     description: "Earrings featuring a silver leaf design with intricate vine detailing, offering a elegant and sophisticated look that complements any ensemble."
   },
