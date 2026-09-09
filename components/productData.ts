@@ -598,7 +598,7 @@ export const products: Product[] = [
   {
     id: "40",
     name: "Triple Tier Pink Zircon Charm Set",
-    category: "Necklace",
+    category: "Sets",
     price: "Rs. 1,899",
     priceValue: 1899,
     shape: "arch",
