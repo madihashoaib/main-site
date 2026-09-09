@@ -450,8 +450,8 @@ export const products: Product[] = [
     id: "30",
     name: "floral-enamel-pave-pendant-set",
     category: "Sets",
-    price: "Rs. 999",
-    priceValue: 999,
+    price: "Rs. 1,100",
+    priceValue: 1100,
     shape: "circle",
     order: 30,
     images: [
@@ -519,7 +519,7 @@ export const products: Product[] = [
   },
 
   // ===================================================================
-  // ↓↓↓ NAYE PRODUCTS — Maryam k new products ↓↓↓
+  // ↓↓↓ Shein New PRODUCTS — Maryam k new products ↓↓↓
   // ===================================================================
   {
     id: "35",
