@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCart } from "./CartContext";
+import Sidebar from "./Sidebar";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const { count, hydrated, openCart } = useCart();
   const pathname = usePathname();
   const isHome = pathname === "/";
@@ -30,9 +32,25 @@ export default function Header() {
           : "bg-transparent py-5"
       }`}
     >
-      <Link href="/" className={`font-serif italic text-2xl tracking-wide ${textColor}`}>
-        adorn <span className="text-gold-light">N</span> adobe
-      </Link>
+      <div className="flex items-center gap-5">
+        <button
+          onClick={() => setSidebarOpen(true)}
+          aria-label="Open menu"
+          className={`hover:text-gold-light transition ${textColor}`}
+        >
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="2" y1="6" x2="20" y2="6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+            <line x1="2" y1="11" x2="20" y2="11" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+            <line x1="2" y1="16" x2="20" y2="16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          </svg>
+        </button>
+
+        <Link href="/" className={`font-serif italic text-2xl tracking-wide ${textColor}`}>
+          adorn <span className="text-gold-light">N</span> adobe
+        </Link>
+      </div>
+
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       <nav className="hidden md:block">
         <ul className={`flex gap-9 text-xs tracking-widest uppercase font-medium ${textColor}`}>
