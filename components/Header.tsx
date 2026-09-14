@@ -5,10 +5,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCart } from "./CartContext";
 import Sidebar from "./Sidebar";
+import SearchOverlay from "./SearchOverlay";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const { count, hydrated, openCart } = useCart();
   const pathname = usePathname();
   const isHome = pathname === "/";
@@ -19,25 +21,12 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Header background is transparent/light at the top on every page (hero
-  // image is light-toned), so text stays dark navy there. Once scrolled,
-  // the header gets a solid dark navy background, so text switches to white.
   const textColor = scrolled ? "text-ivory" : "text-navy-deep";
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 transition-all duration-300 ${
-        scrolled
-          ? "bg-navy-deep/90 backdrop-blur-md py-3 shadow-lg"
-          : "bg-transparent py-5"
-      }`}
-    >
+    <header className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 transition-all duration-300 ${scrolled ? "bg-navy-deep/90 backdrop-blur-md py-3 shadow-lg" : "bg-transparent py-5"}`}>
       <div className="flex items-center gap-5">
-        <button
-          onClick={() => setSidebarOpen(true)}
-          aria-label="Open menu"
-          className={`hover:text-gold-light transition ${textColor}`}
-        >
+        <button onClick={() => setSidebarOpen(true)} aria-label="Open menu" className={`hover:text-gold-light transition ${textColor}`}>
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <line x1="2" y1="6" x2="20" y2="6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
             <line x1="2" y1="11" x2="20" y2="11" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
@@ -51,17 +40,18 @@ export default function Header() {
       </div>
 
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <SearchOverlay isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
 
       <nav className="hidden md:block">
         <ul className={`flex gap-9 text-xs tracking-widest uppercase font-medium ${textColor}`}>
           <li><Link href="/" className="hover:text-gold-light transition">Home</Link></li>
           <li><Link href="/shop" className="hover:text-gold-light transition">Collection</Link></li>
-          <li><Link href="#" className="hover:text-gold-light transition">Contact</Link></li>
+          <li><Link href="/contact" className="hover:text-gold-light transition">Contact</Link></li>
         </ul>
       </nav>
 
       <div className={`flex gap-5 items-center ${textColor}`}>
-        <button aria-label="search" className="hover:text-gold-light transition">
+        <button onClick={() => setSearchOpen(true)} aria-label="search" className="hover:text-gold-light transition">
           <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="9.5" cy="9.5" r="6.5" stroke="currentColor" strokeWidth="1.6" />
             <line x1="14.3" y1="14.3" x2="19.5" y2="19.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />

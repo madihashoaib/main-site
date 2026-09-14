@@ -65,86 +65,42 @@ export default function ProductCard({ product }: { product: Product }) {
       onClick={() => router.push(`/product/${product.id}`)}
       role="link"
       tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === "Enter") router.push(`/product/${product.id}`);
-      }}
+      onKeyDown={(e) => { if (e.key === "Enter") router.push(`/product/${product.id}`); }}
       className="relative bg-white rounded-md overflow-hidden cursor-pointer card-float"
-      style={{
-        transformStyle: "preserve-3d",
-        transition: "transform 0.15s ease-out, box-shadow 0.2s ease-out",
-        boxShadow: shadow,
-        willChange: "transform"
-      }}
+      style={{ transformStyle: "preserve-3d", transition: "transform 0.15s ease-out, box-shadow 0.2s ease-out", boxShadow: shadow, willChange: "transform" }}
     >
-      <div className="relative h-80 bg-gradient-to-br from-ivory-soft to-[#e7e0cf] flex items-center justify-center overflow-hidden">
+      <div className="relative aspect-[4/5] bg-gradient-to-br from-ivory-soft to-[#e7e0cf] flex items-center justify-center overflow-hidden">
         {product.images?.[0] && (
-          <img
-            src={product.images[0]}
-            alt={product.name}
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ transform: "translateZ(40px)" }}
-          />
+          <img src={product.images[0]} alt={product.name} className="absolute inset-0 w-full h-full object-cover" style={{ transform: "translateZ(40px)" }} />
         )}
 
         {product.badge && (
-          <span
-            className="absolute top-4 left-4 bg-navy-deep text-white text-[10px] tracking-wider uppercase px-3 py-1.5 rounded-sm z-10"
-            style={{ transform: "translateZ(60px)" }}
-          >
+          <span className="absolute top-4 left-4 bg-navy-deep text-white text-[10px] tracking-wider uppercase px-3 py-1.5 rounded-sm z-10" style={{ transform: "translateZ(60px)" }}>
             {product.badge}
           </span>
         )}
 
-        <div
-          ref={shineRef}
-          className="absolute inset-0 pointer-events-none opacity-0 transition-opacity duration-200"
-          style={{ transform: "translateZ(90px)", mixBlendMode: "overlay" }}
-        />
+        <div ref={shineRef} className="absolute inset-0 pointer-events-none opacity-0 transition-opacity duration-200" style={{ transform: "translateZ(90px)", mixBlendMode: "overlay" }} />
 
-        <div
-          ref={glowRef}
-          className="absolute w-[260px] h-[260px] rounded-full pointer-events-none opacity-0 transition-opacity duration-300"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(255,255,255,0.95), rgba(255,255,255,0) 70%)",
-            transform: "translateZ(80px)"
-          }}
-        />
+        <div ref={glowRef} className="absolute w-[260px] h-[260px] rounded-full pointer-events-none opacity-0 transition-opacity duration-300" style={{ background: "radial-gradient(circle, rgba(255,255,255,0.95), rgba(255,255,255,0) 70%)", transform: "translateZ(80px)" }} />
 
         {!product.images?.[0] && (
-          <div
-            style={{
-              transform: "translateZ(70px)",
-              filter: "drop-shadow(0 24px 26px rgba(0,0,0,0.22))"
-            }}
-          >
+          <div style={{ transform: "translateZ(70px)", filter: "drop-shadow(0 24px 26px rgba(0,0,0,0.22))" }}>
             <JewelIcon shape={product.shape} />
           </div>
         )}
 
-        <div
-          className="absolute inset-x-6 bottom-3 h-4 rounded-full opacity-30 blur-md bg-navy-deep/40"
-          style={{ transform: "translateZ(20px)" }}
-        />
+        <div className="absolute inset-x-6 bottom-3 h-4 rounded-full opacity-30 blur-md bg-navy-deep/40" style={{ transform: "translateZ(20px)" }} />
       </div>
 
       <div className="px-6 pt-6 pb-7 bg-white" style={{ transform: "translateZ(45px)" }}>
-        <div className="text-[11px] tracking-widest uppercase text-gold mb-2">
-          {product.category}
-        </div>
-        <h3 className="font-serif font-semibold text-xl text-navy-deep mb-3">
+        <div className="text-[11px] tracking-widest uppercase text-gold mb-2">{product.category}</div>
+        <h3 className="font-serif font-semibold text-xl text-navy-deep mb-3 line-clamp-2" title={product.name}>
           {product.name}
         </h3>
         <div className="flex items-center justify-between">
           <span className="text-[17px] font-medium">{product.price}</span>
-          <button
-            aria-label={`Add ${product.name} to cart`}
-            onClick={(e) => {
-              e.stopPropagation();
-              addItem(product);
-            }}
-            className="w-9 h-9 rounded-full border border-navy-deep flex items-center justify-center text-lg text-navy-deep hover:bg-navy-deep hover:text-white transition"
-          >
+          <button aria-label={`Add ${product.name} to cart`} onClick={(e) => { e.stopPropagation(); addItem(product); }} className="w-9 h-9 rounded-full border border-navy-deep flex items-center justify-center text-lg text-navy-deep hover:bg-navy-deep hover:text-white transition">
             +
           </button>
         </div>

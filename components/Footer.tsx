@@ -9,26 +9,25 @@ export default function Footer() {
             adorn <span className="text-gold-light">N</span> adobe
           </Link>
           <p className="mt-4 text-sm leading-7 text-white/50 max-w-[280px]">
-            Jewelry and home living products, designed for quiet elegance and
-            everyday wear.
+            Jewelry and home living products, designed for quiet elegance and everyday wear.
           </p>
         </div>
         <div>
           <h4 className="text-white text-sm tracking-wider uppercase mb-5">Shop</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-gold-light transition">Necklaces</a></li>
-            <li><a href="#" className="hover:text-gold-light transition">Earrings</a></li>
-            <li><a href="#" className="hover:text-gold-light transition">Rings</a></li>
-            <li><a href="#" className="hover:text-gold-light transition">Hair Accessories</a></li>
+            <li><Link href="/shop?category=Earrings" className="hover:text-gold-light transition">Earrings</Link></li>
+            <li><Link href="/shop?category=Ring" className="hover:text-gold-light transition">Rings</Link></li>
+            <li><Link href="/shop?category=Bracelet" className="hover:text-gold-light transition">Bracelets</Link></li>
+            <li><Link href="/shop?category=Sets" className="hover:text-gold-light transition">Sets</Link></li>
           </ul>
         </div>
         <div>
           <h4 className="text-white text-sm tracking-wider uppercase mb-5">Help</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-gold-light transition">Shipping</a></li>
-            <li><a href="#" className="hover:text-gold-light transition">Returns</a></li>
-            <li><a href="#" className="hover:text-gold-light transition">FAQs</a></li>
-            <li><a href="#" className="hover:text-gold-light transition">Contact Us</a></li>
+            <li><Link href="/policies/shipping" className="hover:text-gold-light transition">Shipping</Link></li>
+            <li><Link href="/policies/returns" className="hover:text-gold-light transition">Returns</Link></li>
+            <li><Link href="/policies/faqs" className="hover:text-gold-light transition">FAQs</Link></li>
+            <li><Link href="/contact" className="hover:text-gold-light transition">Contact Us</Link></li>
           </ul>
         </div>
         <div>
@@ -36,7 +35,6 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li><a href="https://www.instagram.com/adornnadobe?igsh=aWVrZHhveDdzeTRr" target="_blank" rel="noopener noreferrer" className="hover:text-gold-light transition">Instagram</a></li>
             <li><a href="https://www.facebook.com/profile.php?id=61592853789016" target="_blank" rel="noopener noreferrer" className="hover:text-gold-light transition">Facebook</a></li>
-            
           </ul>
         </div>
       </div>
