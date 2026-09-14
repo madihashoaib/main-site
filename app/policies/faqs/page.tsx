@@ -4,10 +4,10 @@ import Footer from "@/components/Footer";
 export const metadata = { title: "FAQs — adorn N adobe", description: "Frequently asked questions about adorn N adobe products and orders." };
 
 const faqs = [
-  { q: "Kya products handmade hain?", a: "Haan, hamare zyada tar pieces haath se detail ki checking aur finishing ke saath tayyar kiye jate hain." },
-  { q: "Payment ka tareeqa kya hai?", a: "Abhi Cash on Delivery available hai. Online payment options jald add kiye ja rahe hain." },
-  { q: "Kya main order cancel kar sakti hoon?", a: "Dispatch se pehle order cancel ho sakta hai — jitni jaldi ho sake humein contact karein." },
-    { q: "Kya main order exchange kar sakti hoon?", a: "Haan, agar item damaged ya defective pohncha ho to delivery ke 3 din ke andar exchange request kar sakti hain." }
+  { q: "Are your products handmade?", a: "Yes, most of our pieces are carefully checked and finished by hand." },
+  { q: "What payment methods do you offer?", a: "Currently Cash on Delivery is available. Online payment options are coming soon." },
+  { q: "Can I cancel my order?", a: "Orders can be cancelled before dispatch — please contact us as soon as possible." },
+  { q: "Can I exchange my order?", a: "Yes, if an item arrives damaged or defective, you can request an exchange within 3 days of delivery." }
 ];
 
 export default function FaqsPage() {

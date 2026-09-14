@@ -20,19 +20,19 @@ export default function ShippingPage() {
         <div className="space-y-8 text-sm leading-7 text-gray-600">
           <div>
             <h3 className="text-navy-deep font-semibold mb-2">Processing time</h3>
-            <p>Har order 1–2 business days ke andar pack karke dispatch kiya jata hai.</p>
+            <p>Every order is packed and dispatched within 1–2 business days.</p>
           </div>
           <div>
             <h3 className="text-navy-deep font-semibold mb-2">Delivery time</h3>
-            <p>Pakistan bhar mein courier ke zariye 2–5 business days mein delivery ho jati hai, city ke hisaab se.</p>
+            <p>Delivery across Pakistan takes 2–5 business days by courier, depending on your city.</p>
           </div>
           <div>
             <h3 className="text-navy-deep font-semibold mb-2">Order tracking</h3>
-            <p>Dispatch hone ke baad aapko tracking details WhatsApp ya email par bhej di jati hain.</p>
+            <p>Once your order is dispatched, tracking details are sent to you via WhatsApp or email.</p>
           </div>
         </div>
 
-        <p className="text-gray-400 text-xs mt-10">Kisi bhi shipping se related sawal ke liye humein <a href="/contact" className="text-gold hover:underline">contact</a> karein.</p>
+        <p className="text-gray-400 text-xs mt-10">For any shipping-related questions, please <a href="/contact" className="text-gold hover:underline">contact</a> us.</p>
       </div>
       <Footer />
     </main>

@@ -20,15 +20,15 @@ export default function ReturnsPage() {
         <div className="space-y-8 text-sm leading-7 text-gray-600">
           <div>
             <h3 className="text-navy-deep font-semibold mb-2">Return window</h3>
-            <p>Delivery ke 3 din ke andar, agar item damaged ya defective pohncha ho to return/exchange request kar sakti hain.</p>
+            <p>If an item arrives damaged or defective, you can request a return or exchange within 3 days of delivery.</p>
           </div>
           <div>
             <h3 className="text-navy-deep font-semibold mb-2">Condition</h3>
-            <p>Item apni original packaging mein, bila istemal, tags ke saath wapas bhejni hogi.</p>
+            <p>The item must be returned unused, in its original packaging, with all tags attached.</p>
           </div>
           <div>
             <h3 className="text-navy-deep font-semibold mb-2">How to request</h3>
-            <p>Order number aur unboxing ki tasveer ke saath humein <a href="/contact" className="text-gold hover:underline">contact</a> karein — hum aage ka process guide kar denge.</p>
+            <p>Contact us with your order number and an unboxing photo at <a href="/contact" className="text-gold hover:underline">contact</a> — we'll guide you through the next steps.</p>
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ export default function ContactPage() {
         <span className="text-gold text-xs uppercase tracking-widest">Get in touch</span>
         <h1 className="font-serif italic font-medium text-navy-deep text-[clamp(30px,4vw,44px)] mt-3 mb-8">We'd love to hear from you</h1>
 
-        <p className="text-gray-500 text-sm leading-7 mb-10 max-w-xl">Order ke bare mein sawal ho, custom piece chahiye ho, ya sirf hello kehna ho — neeche diye gaye kisi bhi tareeqay se humse rabta karein. Hum jald az jald reply karte hain.</p>
+        <p className="text-gray-500 text-sm leading-7 mb-10 max-w-xl">Have a question about your order? Reach out to us using any of the methods below. We usually reply as quickly as we can.</p>
 
         <div className="grid sm:grid-cols-2 gap-8">
           <div className="border border-gray-200 rounded-md p-6">
