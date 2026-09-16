@@ -15,9 +15,6 @@ const navLinks = [
   { label: "Rings", href: "/shop?category=Ring" },
   { label: "Bracelets", href: "/shop?category=Bracelet" },
   { label: "Sets", href: "/shop?category=Sets" },
-  // Dedicated page — is category ko shop filter mein render nahi karna,
-  // Bedazzling ka apna alag /bedazzling page banega (next step mein).
-  { label: "Bedazzling", href: "/bedazzling" },
 ];
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
