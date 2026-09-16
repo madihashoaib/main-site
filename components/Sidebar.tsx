@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 
 interface SidebarProps {
@@ -20,6 +21,13 @@ const navLinks = [
 ];
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
+  // Portals need a real browser `document` to render into, which doesn't
+  // exist during server-side rendering. This flag waits until the
+  // component has mounted in the browser before creating the portal, so
+  // there's no "document is not defined" crash and no hydration mismatch.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   // Escape key se close, aur jab sidebar khula ho to background scroll lock
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -35,7 +43,15 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     };
   }, [isOpen, onClose]);
 
-  return (
+  if (!mounted) return null;
+
+  // createPortal renders this JSX directly under <body>, completely
+  // outside Header's DOM tree — even though we're still calling
+  // <Sidebar /> from inside Header.tsx. This is what breaks it free from
+  // Header's backdrop-blur (or any future transform/filter Header might
+  // get), so it always covers the FULL viewport, at the TRUE top layer,
+  // scrolled or not.
+  return createPortal(
     <>
       {/* Dark semi-transparent backdrop */}
       <div
@@ -84,6 +100,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           </ul>
         </nav>
       </aside>
-    </>
+    </>,
+    document.body
   );
 }
