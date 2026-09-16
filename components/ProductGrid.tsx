@@ -20,14 +20,14 @@ export default function ProductGrid() {
       </Reveal>
 
       <div
-        className="grid gap-11 max-w-6xl mx-auto"
+        className="grid gap-11 max-w-6xl mx-auto items-stretch"
         style={{
           gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))",
           perspective: "1400px"
         }}
       >
         {featured.map((product) => (
-          <Reveal key={product.id}>
+          <Reveal key={product.id} className="h-full">
             <ProductCard product={product} />
           </Reveal>
         ))}

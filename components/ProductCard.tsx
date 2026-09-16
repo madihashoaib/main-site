@@ -66,10 +66,10 @@ export default function ProductCard({ product }: { product: Product }) {
       role="link"
       tabIndex={0}
       onKeyDown={(e) => { if (e.key === "Enter") router.push(`/product/${product.id}`); }}
-      className="relative bg-white rounded-md overflow-hidden cursor-pointer card-float"
+      className="relative bg-white rounded-md overflow-hidden cursor-pointer card-float h-full flex flex-col"
       style={{ transformStyle: "preserve-3d", transition: "transform 0.15s ease-out, box-shadow 0.2s ease-out", boxShadow: shadow, willChange: "transform" }}
     >
-      <div className="relative aspect-[4/5] bg-gradient-to-br from-ivory-soft to-[#e7e0cf] flex items-center justify-center overflow-hidden">
+      <div className="relative aspect-[4/5] bg-gradient-to-br from-ivory-soft to-[#e7e0cf] flex items-center justify-center overflow-hidden shrink-0">
         {product.images?.[0] && (
           <img src={product.images[0]} alt={product.name} className="absolute inset-0 w-full h-full object-cover" style={{ transform: "translateZ(40px)" }} />
         )}
@@ -93,11 +93,17 @@ export default function ProductCard({ product }: { product: Product }) {
         <div className="absolute inset-x-6 bottom-3 h-4 rounded-full opacity-30 blur-md bg-navy-deep/40" style={{ transform: "translateZ(20px)" }} />
       </div>
 
-      <div className="px-6 pt-6 pb-7 bg-white" style={{ transform: "translateZ(45px)" }}>
-        <div className="text-[11px] tracking-widest uppercase text-gold mb-2">{product.category}</div>
-        <h3 className="font-serif font-semibold text-xl text-navy-deep mb-3 line-clamp-2" title={product.name}>
-          {product.name}
-        </h3>
+      <div className="px-6 pt-6 pb-7 bg-white flex-1 flex flex-col justify-between" style={{ transform: "translateZ(45px)" }}>
+        <div>
+          <div className="text-[11px] tracking-widest uppercase text-gold mb-2">{product.category}</div>
+          <h3
+            className="font-serif font-semibold text-xl text-navy-deep mb-3 line-clamp-2"
+            style={{ minHeight: "3.2rem" }}
+            title={product.name}
+          >
+            {product.name}
+          </h3>
+        </div>
         <div className="flex items-center justify-between">
           <span className="text-[17px] font-medium">{product.price}</span>
           <button aria-label={`Add ${product.name} to cart`} onClick={(e) => { e.stopPropagation(); addItem(product); }} className="w-9 h-9 rounded-full border border-navy-deep flex items-center justify-center text-lg text-navy-deep hover:bg-navy-deep hover:text-white transition">
