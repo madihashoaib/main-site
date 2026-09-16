@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -34,12 +35,14 @@ export default function ContactPage() {
             rel="noopener noreferrer"
             className="border border-gray-200 rounded-md p-6 hover:border-gold transition block"
           >
-            <div className="w-10 h-10 rounded-full border border-gold flex items-center justify-center mb-4">
-              <svg className="w-5 h-5 text-gold" fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-              </svg>
+            <div className="h-16 flex items-center justify-center mb-4">
+              <Image
+                src="/icons/instagram.png"
+                alt="Instagram"
+                width={40}
+                height={40}
+                className="w-10 h-10 object-contain"
+              />
             </div>
             <h3 className="text-xs uppercase tracking-widest text-gold mb-2">Instagram</h3>
             <span className="text-navy-deep hover:text-gold transition">@adornnadobe</span>
@@ -52,10 +55,14 @@ export default function ContactPage() {
             rel="noopener noreferrer"
             className="border border-gray-200 rounded-md p-6 hover:border-gold transition block"
           >
-            <div className="w-10 h-10 rounded-full border border-gold flex items-center justify-center mb-4">
-              <svg className="w-5 h-5 text-gold" fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-              </svg>
+            <div className="h-16 flex items-center justify-center mb-4">
+              <Image
+                src="/icons/facebook.png"
+                alt="Facebook"
+                width={48}
+                height={48}
+                className="w-12 h-12 object-contain"
+              />
             </div>
             <h3 className="text-xs uppercase tracking-widest text-gold mb-2">Facebook</h3>
             <span className="text-navy-deep hover:text-gold transition">adorn N adobe</span>
@@ -68,11 +75,14 @@ export default function ContactPage() {
             rel="noopener noreferrer"
             className="border border-gray-200 rounded-md p-6 hover:border-gold transition block"
           >
-            <div className="w-10 h-10 rounded-full border border-gold flex items-center justify-center mb-4">
-              <svg className="w-5 h-5 text-gold" fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <rect width="20" height="16" x="2" y="4" rx="2" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-              </svg>
+            <div className="h-16 flex items-center justify-center mb-4">
+              <Image
+                src="/icons/gmail.png"
+                alt="Email"
+                width={56}
+                height={56}
+                className="w-14 h-14 object-contain"
+              />
             </div>
             <h3 className="text-xs uppercase tracking-widest text-gold mb-2">Email</h3>
             <span className="text-navy-deep hover:text-gold transition break-all">adornnadobe@gmail.com</span>
