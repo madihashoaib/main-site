@@ -5,14 +5,32 @@ import Link from "next/link";
 import JewelIcon from "./JewelIcon";
 import { formatRs } from "./CartContext";
 import { getLastOrder, type Order } from "./orderData";
+import { fbEvent } from "@/lib/pixel";
 
 export default function OrderConfirmed() {
   const [order, setOrder] = useState<Order | null>(null);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    setOrder(getLastOrder());
+    const o = getLastOrder();
+    setOrder(o);
     setReady(true);
+
+    // Meta Pixel — Purchase (sessionStorage guard so refresh doesn't re-fire it)
+    if (o) {
+      const key = `fb_purchase_${o.id}`;
+      if (!sessionStorage.getItem(key)) {
+        fbEvent("Purchase", {
+          content_ids: o.items.map((i) => i.product.id),
+          content_type: "product",
+          num_items: o.items.reduce((s, i) => s + i.qty, 0),
+          value: o.total,
+          currency: "PKR",
+          order_id: o.id
+        });
+        sessionStorage.setItem(key, "1");
+      }
+    }
   }, []);
 
   if (ready && !order) {

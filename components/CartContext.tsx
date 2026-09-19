@@ -9,6 +9,7 @@ import {
   useState
 } from "react";
 import type { Product } from "./productData";
+import { fbEvent } from "@/lib/pixel";
 
 export type CartItem = { product: Product; qty: number };
 
@@ -72,6 +73,15 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       return [...prev, { product, qty }];
     });
     setIsOpen(true);
+
+    // Meta Pixel — AddToCart
+    fbEvent("AddToCart", {
+      content_ids: [product.id],
+      content_name: product.name,
+      content_type: "product",
+      value: product.priceValue * qty,
+      currency: "PKR"
+    });
   }, []);
 
   const removeItem = useCallback((id: string) => {

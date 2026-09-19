@@ -66,7 +66,7 @@ export default function ProductCard({ product }: { product: Product }) {
       role="link"
       tabIndex={0}
       onKeyDown={(e) => { if (e.key === "Enter") router.push(`/product/${product.id}`); }}
-      className="relative bg-white rounded-md overflow-hidden cursor-pointer card-float h-full flex flex-col"
+      className="relative bg-white rounded-md overflow-hidden cursor-pointer h-full flex flex-col"
       style={{ transformStyle: "preserve-3d", transition: "transform 0.15s ease-out, box-shadow 0.2s ease-out", boxShadow: shadow, willChange: "transform" }}
     >
       <div className="relative aspect-[4/5] bg-gradient-to-br from-ivory-soft to-[#e7e0cf] flex items-center justify-center overflow-hidden shrink-0">

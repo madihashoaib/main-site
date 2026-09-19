@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Reveal from "./Reveal";
 import ProductCard from "./ProductCard";
 import JewelIcon from "./JewelIcon";
 import { getProductCopy, type Product } from "./productData";
 import { useCart } from "./CartContext";
+import { fbEvent } from "@/lib/pixel";
 
 function Stars() {
   return (
@@ -30,6 +31,16 @@ export default function ProductDetail({
   const [openSection, setOpenSection] = useState<string | null>("Materials");
   const [activeImage, setActiveImage] = useState(0);
   const gallery = product.images ?? [];
+
+  useEffect(() => {
+    fbEvent("ViewContent", {
+      content_ids: [product.id],
+      content_name: product.name,
+      content_type: "product",
+      value: product.priceValue,
+      currency: "PKR"
+    });
+  }, [product.id]);
 
   const sections: { title: string; body: React.ReactNode }[] = [
     {

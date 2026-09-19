@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import JewelIcon from "./JewelIcon";
 import { useCart, formatRs } from "./CartContext";
 import { useAuth } from "./AuthContext";
+import { fbEvent } from "@/lib/pixel";
 import {
   FREE_SHIPPING_OVER,
   SHIPPING_FEE,
@@ -45,6 +46,18 @@ export default function CheckoutPage() {
 
   const shipping = subtotal >= FREE_SHIPPING_OVER || subtotal === 0 ? 0 : SHIPPING_FEE;
   const total = subtotal + shipping;
+
+  // Meta Pixel — InitiateCheckout (fires once, when cart is loaded)
+  useEffect(() => {
+    if (hydrated && items.length > 0) {
+      fbEvent("InitiateCheckout", {
+        content_ids: items.map((i) => i.product.id),
+        num_items: count,
+        value: subtotal,
+        currency: "PKR"
+      });
+    }
+  }, [hydrated]);
 
   // Prefill name/email for logged-in shoppers.
   useEffect(() => {

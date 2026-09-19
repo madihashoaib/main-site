@@ -5,12 +5,13 @@ import FaqItem, { Faq } from "@/components/FaqItem";
 export const metadata = { title: "FAQs — adorn N adobe", description: "Frequently asked questions about adorn N adobe products and orders." };
 
 const faqs: Faq[] = [
-  {
-    q: "Are your products handmade?",
-    a: "Yes, most of our pieces are carefully checked and finished by hand.",
-    qUr: "کیا آپ کی مصنوعات ہاتھ سے بنائی جاتی ہیں؟",
-    aUr: "جی ہاں، ہمارے زیادہ تر زیورات کو احتیاط سے چیک کر کے ہاتھ سے فنشنگ دی جاتی ہے۔"
+    {
+    q: "What is the process of returning a parcel?",
+    a: "We guarantee 100% quality-checked pieces — every item is inspected before it's shipped, so damage is extremely rare. But if a piece does arrive damaged in transit, our rider will personally come to your doorstep to collect it and hand you a brand-new replacement, at no extra cost.",
+    qUr: "پارسل واپس کرنے کا طریقہ کیا ہے؟",
+    aUr: "ہمارے تمام زیورات شپمنٹ سے پہلے مکمل طور پر چیک کیے جاتے ہیں، اس لیے نقصان کا امکان نہ ہونے کے برابر ہوتا ہے۔ لیکن اگر شپنگ کے دوران کوئی پیس ڈیمج ہو جائے، تو ہمارا رائیڈر خود آپ کے گھر آ کر وہ پیس واپس لے گا اور بغیر کسی اضافی چارج کے آپ کو نیا پیس دے جائے گا۔"
   },
+    
   {
     q: "What payment methods do you offer?",
     a: "Currently Cash on Delivery is available. Online payment options are coming soon.",
@@ -42,10 +43,10 @@ const faqs: Faq[] = [
     aUr: "ہمارے زیورات اعلیٰ معیار کی دھات پر گولڈ یا سلور پلیٹنگ سے تیار کیے جاتے ہیں، جس کی تفصیل ہر پراڈکٹ کی تفصیل میں دی گئی ہے۔"
   },
   {
-    q: "Is your jewelry waterproof or sweat-proof?",
-    a: "Our pieces are water-resistant for everyday wear, but we recommend removing them before swimming, showering, or heavy exercise to keep the shine intact.",
+    q: "Is your jewelry waterproof ?",
+    a: "Our pieces are water-resistant for everyday wear, but we recommend removing them before swimming or showering.",
     qUr: "کیا زیورات پانی اور پسینے سے محفوظ ہیں؟",
-    aUr: "روزمرہ استعمال کے لیے یہ پانی سے کسی حد تک محفوظ ہیں، لیکن نہاتے وقت، تیراکی یا ورزش کے دوران اتار دینے کی تجویز دی جاتی ہے تاکہ چمک برقرار رہے۔"
+    aUr: "روزمرہ استعمال کے لیے یہ پانی سے کسی حد تک محفوظ ہیں، لیکن نہاتے وقت، تیراکی یا  اتار دینے کی تجویز دی جاتی ہے تاکہ چمک برقرار رہے۔"
   },
   {
     q: "How long does delivery take?",
@@ -72,13 +73,13 @@ export default function FaqsPage() {
     <main>
       <Header />
       <div className="pt-32 pb-24 px-6 md:px-12 max-w-3xl mx-auto">
-        <nav className="text-xs text-gray-400 tracking-wide mb-6">
+        <nav className="text-[14px] text-gray-400 tracking-wide mb-6">
           <a href="/" className="hover:text-navy-deep transition">Home</a>
           <span className="mx-2">/</span>
           <span className="text-navy-deep">FAQs</span>
         </nav>
 
-        <span className="text-gold text-xs uppercase tracking-widest">Help</span>
+        <span className="text-gold text-[14px] uppercase tracking-widest">Help</span>
         <h1 className="font-serif italic font-medium text-navy-deep text-[clamp(30px,4vw,44px)] mt-3 mb-10">Frequently Asked Questions</h1>
 
         <div className="divide-y divide-gray-200">
@@ -87,7 +88,7 @@ export default function FaqsPage() {
           ))}
         </div>
 
-        <p className="text-gray-400 text-xs mt-10">Koi aur sawal ho to humein <a href="/contact" className="text-gold hover:underline">contact</a> karein.</p>
+        <p className="text-gray-400 text-[14px] mt-10">Koi aur sawal ho to humein <a href="/contact" className="text-gold hover:underline">contact</a> karein.</p>
       </div>
       <Footer />
     </main>
