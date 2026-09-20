@@ -13,7 +13,7 @@ const categories: CategoryTile[] = [
   },
   {
     name: "Rings",
-    image: "/images/products/floral-green-ring-2.jpeg",
+    image: "/images/products/Multicolor-Zircon-Cluster-Cocktail-Ring.jpeg",
     href: "/shop?category=Ring"
   },
   {
@@ -23,12 +23,8 @@ const categories: CategoryTile[] = [
   },
   {
     name: "Sets",
-    image: "/images/products/Silver-Tone-Mint-Green-Zircon-Heart-Motif-Necklace-And-Earrings-Set.jpeg",
+    image: "/images/products/Silver-Tone-Zircon-Butterfly-Wing-Necklace-And-Earrings-Set-3.jpeg",
     href: "/shop?category=Sets"
-  },
-  {
-    name: "Home Living",
-    comingSoon: true
   }
 ];
 
@@ -46,8 +42,7 @@ export default function CategoryStrip() {
 
       <div className="grid md:grid-cols-2 gap-4 max-w-6xl mx-auto">
         {/* ============ big featured tile ============ */}
-        <a
-          href={featured.href}
+        <a href={featured.href}
           className="group relative overflow-hidden rounded-2xl h-[340px] md:h-auto min-h-[420px] flex items-end p-8"
         >
           <img
@@ -66,8 +61,11 @@ export default function CategoryStrip() {
         </a>
 
         {/* ============ small tile grid ============ */}
-        <div className="grid grid-cols-2 gap-4">
-          {rest.map((cat) => {
+        <div className="grid grid-cols-2 grid-rows-2 gap-4">
+          {rest.map((cat, index) => {
+            // 3 tiles hon to pehli tile lambi (2 rows) ban jaye, warna normal grid
+            const tall = rest.length === 3 && index === 0;
+
             const inner = (
               <>
                 {cat.image ? (
@@ -95,7 +93,7 @@ export default function CategoryStrip() {
               return (
                 <div
                   key={cat.name}
-                  className="group relative rounded-2xl h-[195px] overflow-hidden flex items-end p-5 cursor-default"
+                  className={`group relative rounded-2xl min-h-[195px] overflow-hidden flex items-end p-5 cursor-default ${tall ? "row-span-2" : ""}`}
                 >
                   {inner}
                 </div>
@@ -103,10 +101,8 @@ export default function CategoryStrip() {
             }
 
             return (
-              <a
-                key={cat.name}
-                href={cat.href}
-                className="group relative rounded-2xl h-[195px] overflow-hidden flex items-end p-5"
+              <a key={cat.name} href={cat.href}
+                className={`group relative rounded-2xl min-h-[195px] overflow-hidden flex items-end p-5 ${tall ? "row-span-2" : ""}`}
               >
                 {inner}
               </a>
