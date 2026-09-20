@@ -61,6 +61,7 @@ export default function ProductDetail({
   ];
 
   const handleAdd = () => {
+    if (product.soldOut) return;
     addItem(product, qty);
     setAdded(true);
     window.setTimeout(() => setAdded(false), 2200);
@@ -87,6 +88,12 @@ export default function ProductDetail({
             {product.badge && (
               <span className="absolute top-5 left-5 bg-navy-deep text-white text-[10px] tracking-wider uppercase px-3 py-1.5 rounded-sm z-10">
                 {product.badge}
+              </span>
+            )}
+
+            {product.soldOut && (
+              <span className="absolute top-5 right-5 bg-red-600 text-white text-[10px] tracking-wider uppercase px-3 py-1.5 rounded-sm z-10">
+                Sold Out
               </span>
             )}
 
@@ -143,48 +150,70 @@ export default function ProductDetail({
               <span className="text-gray-500">4.8 </span>
             </div>
 
-            <div className="text-2xl font-medium text-navy-deep mb-7">
-              {product.price}
+            <div className="flex items-center gap-4 mb-7">
+              <span
+                className={`text-2xl font-medium ${
+                  product.soldOut ? "text-gray-400 line-through" : "text-navy-deep"
+                }`}
+              >
+                {product.price}
+              </span>
+              {product.soldOut && (
+                <span className="text-xs tracking-wider uppercase text-red-600 font-semibold">
+                  Currently sold out
+                </span>
+              )}
             </div>
 
             <p className="text-gray-600 text-[15px] leading-8 mb-9 max-w-lg">
               {copy.description}
             </p>
 
-            {/* Quantity */}
-            <div className="flex items-center gap-6 mb-7">
-              <span className="text-xs uppercase tracking-widest text-gray-500">Quantity</span>
-              <div className="flex items-center border border-gray-300 rounded-sm">
-                <button
-                  aria-label="Decrease quantity"
-                  onClick={() => setQty((q) => Math.max(1, q - 1))}
-                  className="w-10 h-10 text-lg text-navy-deep hover:bg-ivory-soft transition"
-                >
-                  −
-                </button>
-                <span className="w-10 text-center text-sm">{qty}</span>
-                <button
-                  aria-label="Increase quantity"
-                  onClick={() => setQty((q) => q + 1)}
-                  className="w-10 h-10 text-lg text-navy-deep hover:bg-ivory-soft transition"
-                >
-                  +
-                </button>
+            {/* Quantity — sold out par hide */}
+            {!product.soldOut && (
+              <div className="flex items-center gap-6 mb-7">
+                <span className="text-xs uppercase tracking-widest text-gray-500">Quantity</span>
+                <div className="flex items-center border border-gray-300 rounded-sm">
+                  <button
+                    aria-label="Decrease quantity"
+                    onClick={() => setQty((q) => Math.max(1, q - 1))}
+                    className="w-10 h-10 text-lg text-navy-deep hover:bg-ivory-soft transition"
+                  >
+                    −
+                  </button>
+                  <span className="w-10 text-center text-sm">{qty}</span>
+                  <button
+                    aria-label="Increase quantity"
+                    onClick={() => setQty((q) => q + 1)}
+                    className="w-10 h-10 text-lg text-navy-deep hover:bg-ivory-soft transition"
+                  >
+                    +
+                  </button>
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Actions */}
             <div className="flex flex-wrap gap-4 mb-9">
-              <button
-                onClick={handleAdd}
-                className={`flex-1 min-w-[220px] text-sm tracking-wider uppercase px-8 py-4 rounded-sm transition ${
-                  added
-                    ? "bg-gold text-navy-deep"
-                    : "bg-navy-deep text-white hover:bg-navy-mid"
-                }`}
-              >
-                {added ? "Added to bag ✓" : "Add to bag"}
-              </button>
+              {product.soldOut ? (
+                <button
+                  disabled
+                  className="flex-1 min-w-[220px] text-sm tracking-wider uppercase px-8 py-4 rounded-sm bg-gray-300 text-gray-500 cursor-not-allowed"
+                >
+                  Sold Out
+                </button>
+              ) : (
+                <button
+                  onClick={handleAdd}
+                  className={`flex-1 min-w-[220px] text-sm tracking-wider uppercase px-8 py-4 rounded-sm transition ${
+                    added
+                      ? "bg-gold text-navy-deep"
+                      : "bg-navy-deep text-white hover:bg-navy-mid"
+                  }`}
+                >
+                  {added ? "Added to bag ✓" : "Add to bag"}
+                </button>
+              )}
               <button
                 aria-label="Add to wishlist"
                 className="px-6 py-4 rounded-sm border border-navy-deep text-navy-deep hover:bg-navy-deep hover:text-white transition"

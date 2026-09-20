@@ -22,6 +22,8 @@ export type Product = {
    *  Use this when a specific product's real materials differ from the
    *  usual category ones (e.g. a Ring with no zircon stones). */
   materials?: string[];
+  /** true = sold out. Page khulega, lekin Add to Cart band hoga. */
+  soldOut?: boolean;
 };
 
 export const products: Product[] = [
@@ -95,7 +97,8 @@ export const products: Product[] = [
     shape: "drop",
     order: 14,
     images: [
-      "/images/products/Gold-Pavé-Floral-Teardrop-Dangle-Earrings.jpeg"
+      "site-main/public/images/products/Gold-Pavé-Floral-Teardrop-Dangle-Earrings.jpeg",
+      "site-main/public/images/products/Gold-Pavé-Floral-Teardrop-Dangle-Earrings-1.jpeg"
     ],
     description: "Graceful teardrop earrings finished in gold with a pavé floral design. Their gentle movement and soft shine make them an easy pick for both everyday elegance and evening events."
   },
@@ -123,7 +126,10 @@ export const products: Product[] = [
     shape: "drop",
     order: 12,
     images: [
-      "/images/products/Golden-Tone-Geometric-Rhombus-Floral-Dangle-Earrings.jpeg"
+      "site-main/public/jewel/Golden-Tone-Geometric-Rhombus-Floral-Dangle-Earrings.jpeg",
+      "site-main/public/jewel/Golden-Tone-Geometric-Rhombus-Floral-Dangle-Earrings-1.jpeg",
+      "site-main/public/images/products/Golden-Tone-Geometric-Rhombus-Floral-Dangle-Earrings-2.jpeg",
+      "site-main/public/jewel/Golden-Tone-Geometric-Rhombus-Floral-Dangle-Earrings-3.jpeg"
     ],
     description: "Contemporary dangle earrings combining geometric rhombus shapes with delicate floral detailing in a rich gold tone. A striking blend of modern lines and classic femininity."
   },
@@ -183,7 +189,8 @@ export const products: Product[] = [
       "/images/products/Rose-Gold-Red-Zircon-Solitaire-With-Pavé-Cluster-Ring-2.jpeg",
       "/images/products/Rose-Gold-Red-Zircon-Solitaire-With-Pavé-Cluster-Ring-3.jpeg"
     ],
-    description: "A striking solitaire ring in rose gold with a vivid red zircon centre stone, framed by a sparkling pavé cluster. A bold, romantic piece that makes a lasting impression."
+    description: "A striking solitaire ring in rose gold with a vivid red zircon centre stone, framed by a sparkling pavé cluster. A bold, romantic piece that makes a lasting impression.",
+    soldOut: true
   },
   {
     id: "12",
@@ -194,7 +201,8 @@ export const products: Product[] = [
     shape: "drop",
     order: 7,
     images: [
-      "/images/products/Silver-Floral-Pavé-Zircon-Drop-Earrings-With-Purple-Stone-Cluster.jpeg"
+      "site-main/public/images/products/Silver-Floral-Pavé-Zircon-Drop-Earrings-With-Purple-Stone-Cluster.jpeg",
+      "site-main/public/images/products/Silver-Floral-Pavé-Zircon-Drop-Earrings-With-Purple-Stone-Cluster-1.jpeg"
     ],
     description: "Silver-tone drop earrings featuring pavé zircon detailing and a soft purple stone cluster. Their floral design brings a feminine, delicate sparkle to any outfit."
   },
@@ -221,7 +229,8 @@ export const products: Product[] = [
     shape: "drop",
     order: 5,
     images: [
-      "/images/products/Silver-Pavé-Floral-Teardrop-Dangle-Earrings.jpeg"
+      "/images/products/Silver-Pavé-Floral-Teardrop-Dangle-Earrings.jpeg",
+      "site-main/public/jewel/Silver-Pavé-Floral-Teardrop-Dangle-Earrings-1.jpeg"
     ],
     description: "Delicate teardrop earrings in silver tone with pavé floral detailing. Lightweight and graceful, they add a subtle shimmer to everyday and evening wear alike."
   },
@@ -260,8 +269,10 @@ export const products: Product[] = [
     shape: "drop",
     order: 2,
     images: [
-      "/images/products/Two-tone-Zirconia-Floral-Earrings-With-Champagne-Accents.jpeg",
-      "/images/products/Two-tone-Zirconia-Floral-Earrings-With-Champagne-Accents-2.jpeg"
+      "site-main/public/images/products/Two-tone-Zirconia-Floral-Earrings-With-Champagne-Accents.jpeg",
+      "site-main/public/images/products/Two-tone-Zirconia-Floral-Earrings-With-Champagne-Accents-1.jpeg",
+      "site-main/public/images/products/Two-tone-Zirconia-Floral-Earrings-With-Champagne-Accents-3.jpeg",
+      "site-main/public/images/products/Two-tone-Zirconia-Floral-Earrings-With-Champagne-Accents-4.jpeg"
     ],
     description: "Two-tone floral earrings featuring sparkling zirconia with warm champagne accents. Their layered design adds dimension and shine, perfect for festive occasions."
   },
@@ -470,7 +481,12 @@ export const products: Product[] = [
     order: 31,
     images: [
       "/images/products/marquise-feathered-swan-necklace.jpeg",
-      "/images/products/marquise-feathered-swan-necklace-2.jpeg"
+      "site-main/public/jewel/marquise-feathered-swan-necklace-1.jpeg",
+      "site-main/public/jewel/marquise-feathered-swan-necklace-2.jpeg",
+      "site-main/public/jewel/marquise-feathered-swan-necklace-3.jpeg",
+      "site-main/public/jewel/marquise-feathered-swan-necklace-4.jpeg",
+      "site-main/public/jewel/marquise-feathered-swan-necklace-5.jpeg",
+      "site-main/public/images/products/marquise-feathered-swan-necklace-6.jpeg"
     ],
     description: "A graceful silver-tone necklace featuring an intricate swan pendant with sparkling marquise-cut crystal feathers. Detailed with a delicate, accent-lined chain, this piece brings a touch of timeless elegance and brilliant shine to any outfit."
   },
@@ -486,14 +502,15 @@ export const products: Product[] = [
       "/images/products/multicolor-gemstone-huggie-hoops.jpeg",
       "/images/products/multicolor-gemstone-huggie-hoops-2.jpeg"
     ],
-    description: "A vibrant array of multicolored gemstones set in huggie-style hoops, offering a playful yet sophisticated look that complements any ensemble."
+    description: "A vibrant array of multicolored gemstones set in huggie-style hoops, offering a playful yet sophisticated look that complements any ensemble.",
+    soldOut: true
   },
   {
     id: "33",
     name: "textured-gold-pave-open-cuff-ring",
     category: "Ring",
-    price: "Rs. 499",
-    priceValue: 499,
+    price: "Rs. 599",
+    priceValue: 599,
     shape: "circle",
     order: 33,
     images: [
@@ -511,9 +528,11 @@ export const products: Product[] = [
     shape: "arch",
     order: 34,
     images: [
-      "/images/products/Silver-leaf-vine-earrings.jpeg",
-      "/images/products/Silver-leaf-vine-earrings-2.jpeg",
-      "/images/products/Silver-leaf-vine-earrings-3.jpeg"
+      "site-main/public/jewel/Silver-leaf-vine-earrings.jpeg",
+      "site-main/public/jewel/Silver-leaf-vine-earrings-1.jpeg",
+      "site-main/public/images/products/Silver-leaf-vine-earrings-1.jpeg",
+      "site-main/public/images/products/Silver-leaf-vine-earrings-2.jpeg",
+      "site-main/public/images/products/Silver-leaf-vine-earrings-3.jpeg"
     ],
     description: "Earrings featuring a silver leaf design with intricate vine detailing, offering a elegant and sophisticated look that complements any ensemble."
   },
@@ -561,7 +580,10 @@ export const products: Product[] = [
     order: 37,
     images: [
       "/images/products/Royal Blue Starburst Statement Studs.jpeg",
-      "/images/products/Royal Blue Starburst Statement Studs-1.jpeg"
+      "/images/products/Royal Blue Starburst Statement Studs-1.jpeg",
+      "site-main/public/jewel/Royal Blue Starburst Statement Studs-2.jpeg",
+      "site-main/public/jewel/Royal Blue Starburst Statement Studs-3.jpeg",
+      "site-main/public/jewel/Royal Blue Starburst Statement Studs-4.jpeg"
     ],
     description: "Bold starburst stud earrings set with rich royal blue stones. A vivid pop of colour designed to stand out, ideal for evening looks and festive wear."
   },
@@ -608,16 +630,105 @@ export const products: Product[] = [
       "/images/products/Triple Tier Pink Zircon Charm Set-1.jpeg"
     ],
     description: "A layered necklace set with three tiers of delicate chains, each finished with a soft pink zircon charm. Romantic and light, it adds gentle dimension to any neckline."
-  }
+  },
+  {
+    id: "41",
+    name: "Classic Silver Twist Ring",
+    category: "Ring",
+    price: "Rs. 549",
+    priceValue: 549,
+    shape: "circle",
+    order: 41,
+    images: [
+      "site-main/public/jewel/classic-silver-twist-ring-1.jpeg",
+      "site-main/public/jewel/classic-silver-twist-ring-2.jpeg"
+    ],
+    description: "A classic silver twist ring with a comfortable fit and a timeless design. Perfect for everyday wear or as a statement piece."
+  },
+  {
+    id: "42",
+    name: "Gold Dainty Sparkle Open Ring",
+    category: "Ring",
+    price: "Rs. 549",
+    priceValue: 549,
+    shape: "circle",
+    order: 42,
+    images: [
+      "site-main/public/jewel/gold-dainty-sparkle-open-ring-1.jpeg",
+      "site-main/public/jewel/gold-dainty-sparkle-open-ring-2.jpeg",
+      "site-main/public/jewel/gold-dainty-sparkle-open-ring-3.jpeg"
+    ],
+    description: "A gold dainty sparkle open ring with a comfortable fit and a timeless design. Perfect for everyday wear or as a statement piece."
+  },
+  {
+    id: "43",
+    name: "Gold Floral Pearl Statement Ring",
+    category: "Ring",
+    price: "Rs. 549",
+    priceValue: 549,
+    shape: "circle",
+    order: 43,
+    images: [
+      "site-main/public/jewel/gold-floral-pearl-statement-ring-1.jpeg",
+      "site-main/public/jewel/gold-floral-pearl-statement-ring-2.jpeg",
+      "site-main/public/jewel/gold-floral-pearl-statement-ring-3.jpeg"
+    ],
+    description: "A gold-toned floral ring adorned with lustrous pearls, designed for a snug, comfortable fit. A graceful piece that adds charm to everyday looks and special occasions alike."
+  },
+  {
+    id: "44",
+    name: "Silver Butterfly Open Ring",
+    category: "Ring",
+    price: "Rs. 549",
+    priceValue: 549,
+    shape: "circle",
+    order: 44,
+    images: [
+      "site-main/public/jewel/silver-butterfly-open-ring-1.jpeg",
+      "site-main/public/jewel/silver-butterfly-open-ring-2.jpeg"
+    ],
+    description: "A silver butterfly open ring with a comfortable fit and a timeless design. Perfect for everyday wear or as a statement piece."
+  },
+  {
+    id: "45",
+    name: "Silver Sunflower Zircon Necklace",
+    category: "Sets",
+    price: "Rs. 599",
+    priceValue: 599,
+    shape: "band",
+    order: 45,
+    images: [
+      "site-main/public/jewel/silver-sunflower-zircon-necklace.jpeg",
+      "site-main/public/jewel/silver-sunflower-zircon-necklace-1.jpeg",
+      "site-main/public/jewel/silver-sunflower-zircon-necklace-2.jpeg",
+      "site-main/public/jewel/silver-sunflower-zircon-necklace-3.jpeg"
+    ],
+    description: "A silver sunflower zircon necklace with a comfortable fit and a timeless design. Perfect for everyday wear or as a statement piece."
+  },
+  {
+    id: "46",
+    name: "Vintage Gold Pearl Ring",
+    category: "Ring",
+    price: "Rs. 549",
+    priceValue: 549,
+    shape: "circle",
+    order: 46,
+    images: [
+      "site-main/public/jewel/vintage-gold-pearl-ring.jpeg",
+      "site-main/public/jewel/vintage-gold-pearl-ring-1.jpeg",
+      "site-main/public/jewel/vintage-gold-pearl-ring-2.jpeg",
+      "site-main/public/jewel/vintage-gold-pearl-ring-3.jpeg"
+    ],
+    description: "A vintage gold pearl ring with a comfortable fit and a timeless design. Perfect for everyday wear or as a statement piece."
+  },
+
 ];
 
 export const categories = ["All", "Earrings", "Ring", "Bracelet", "Sets"] as const;
 
 /** Category-level detail content, reused when a product has no custom copy. */
-const categoryDetails: Record<
-  Category,
-  { blurb: string; materials: string[]; care: string; shipping: string }
-> = {
+type CategoryDetail = { blurb: string; materials: string[]; care: string; shipping: string };
+const categoryDetails: Record<Category, CategoryDetail> = {
   Necklace: {
     blurb:
       "A necklace made to sit close to the heart — light enough for everyday, refined enough for the evenings that matter. Each chain is hand-finished so it lies flat and catches light with every movement.",

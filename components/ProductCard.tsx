@@ -71,12 +71,23 @@ export default function ProductCard({ product }: { product: Product }) {
     >
       <div className="relative aspect-[4/5] bg-gradient-to-br from-ivory-soft to-[#e7e0cf] flex items-center justify-center overflow-hidden shrink-0">
         {product.images?.[0] && (
-          <img src={product.images[0]} alt={product.name} className="absolute inset-0 w-full h-full object-cover" style={{ transform: "translateZ(40px)" }} />
+          <img
+            src={product.images[0]}
+            alt={product.name}
+            className={`absolute inset-0 w-full h-full object-cover ${product.soldOut ? "grayscale opacity-60" : ""}`}
+            style={{ transform: "translateZ(40px)" }}
+          />
         )}
 
         {product.badge && (
           <span className="absolute top-4 left-4 bg-navy-deep text-white text-[10px] tracking-wider uppercase px-3 py-1.5 rounded-sm z-10" style={{ transform: "translateZ(60px)" }}>
             {product.badge}
+          </span>
+        )}
+
+        {product.soldOut && (
+          <span className="absolute top-4 right-4 bg-red-600 text-white text-[10px] tracking-wider uppercase px-3 py-1.5 rounded-sm z-10" style={{ transform: "translateZ(60px)" }}>
+            Sold Out
           </span>
         )}
 
@@ -105,10 +116,22 @@ export default function ProductCard({ product }: { product: Product }) {
           </h3>
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-[17px] font-medium">{product.price}</span>
-          <button aria-label={`Add ${product.name} to cart`} onClick={(e) => { e.stopPropagation(); addItem(product); }} className="w-9 h-9 rounded-full border border-navy-deep flex items-center justify-center text-lg text-navy-deep hover:bg-navy-deep hover:text-white transition">
-            +
-          </button>
+          <span className={`text-[17px] font-medium ${product.soldOut ? "text-gray-400 line-through" : ""}`}>
+            {product.price}
+          </span>
+          {product.soldOut ? (
+            <span className="text-[11px] tracking-wider uppercase text-red-600 font-semibold">
+              Sold Out
+            </span>
+          ) : (
+            <button
+              aria-label={`Add ${product.name} to cart`}
+              onClick={(e) => { e.stopPropagation(); addItem(product); }}
+              className="w-9 h-9 rounded-full border border-navy-deep flex items-center justify-center text-lg text-navy-deep hover:bg-navy-deep hover:text-white transition"
+            >
+              +
+            </button>
+          )}
         </div>
       </div>
     </div>

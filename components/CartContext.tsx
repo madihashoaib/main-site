@@ -8,7 +8,7 @@ import {
   useMemo,
   useState
 } from "react";
-import type { Product } from "./productData";
+import { getProductById, type Product } from "./productData";
 import { fbEvent } from "@/lib/pixel";
 
 export type CartItem = { product: Product; qty: number };
@@ -42,10 +42,21 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const [hydrated, setHydrated] = useState(false);
 
   // Load saved cart once, on the client, after mount.
+  // Saved items ko productData se dobara match karte hain:
+  // sold out ya delete hue products hat jate hain, baaqi ka data fresh ho jata hai.
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem(STORAGE_KEY);
-      if (raw) setItems(JSON.parse(raw));
+      if (raw) {
+        const saved: CartItem[] = JSON.parse(raw);
+        const cleaned = saved.reduce<CartItem[]>((acc, item) => {
+          const fresh = getProductById(item.product.id);
+          if (!fresh || fresh.soldOut) return acc;
+          acc.push({ ...item, product: fresh });
+          return acc;
+        }, []);
+        setItems(cleaned);
+      }
     } catch {
       /* ignore corrupt storage */
     }
@@ -63,6 +74,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, [items, hydrated]);
 
   const addItem = useCallback((product: Product, qty = 1) => {
+    // Sold out product kisi bhi tareeqe se cart mein nahi jayega
+    if (product.soldOut || getProductById(product.id)?.soldOut) return;
+
     setItems((prev) => {
       const existing = prev.find((i) => i.product.id === product.id);
       if (existing) {
