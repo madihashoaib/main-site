@@ -43,6 +43,7 @@ export default function CheckoutPage() {
   const [form, setForm] = useState<FormState>(emptyForm);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [placing, setPlacing] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const shipping = subtotal >= FREE_SHIPPING_OVER || subtotal === 0 ? 0 : SHIPPING_FEE;
   const total = subtotal + shipping;
@@ -96,6 +97,7 @@ export default function CheckoutPage() {
       return;
     }
     setPlacing(true);
+    setSubmitError(null);
     const order = {
       id: makeOrderId(),
       items,
@@ -114,16 +116,28 @@ export default function CheckoutPage() {
       paymentMethod: "Cash on Delivery",
       createdAt: new Date().toISOString()
     };
-    // Always keep a local copy for the confirmation page…
-    saveLastOrder(order);
-    // …and send it to the database (reaches seller + saves to account history).
-    // If the DB call fails, the order still completes locally.
+
+    // Save to the database FIRST. If it fails, do not confirm the order.
+    let dbError: string | null = null;
     try {
-      await saveOrderToDb(order, user?.id ?? null);
-    } catch {
-      /* network/DB issue — local order already saved */
+      dbError = await saveOrderToDb(order, user?.id ?? null);
+    } catch (e) {
+      dbError = e instanceof Error ? e.message : "Network error";
     }
-    // send order confirmation email (non-blocking — order already placed either way)
+    if (dbError) {
+      console.error("Order save failed:", dbError);
+      setSubmitError(
+        "Sorry, we couldn't place your order. Please try again, or contact us on WhatsApp. (" +
+          dbError +
+          ")"
+      );
+      setPlacing(false);
+      return;
+    }
+
+    // Saved OK: keep a local copy for the confirmation page
+    saveLastOrder(order);
+    // send order confirmation email (non-blocking)
     fetch("/api/send-order-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -267,6 +281,12 @@ export default function CheckoutPage() {
               <span className="text-xl font-medium text-navy-deep">{formatRs(total)}</span>
             </div>
           </div>
+
+          {submitError && (
+            <p className="mt-5 text-xs text-red-600 bg-red-50 border border-red-200 rounded-sm px-3 py-2">
+              {submitError}
+            </p>
+          )}
 
           <button
             onClick={placeOrder}
