@@ -5,10 +5,13 @@ import { useRouter } from "next/navigation";
 import type { Product } from "./productData";
 import JewelIcon from "./JewelIcon";
 import { useCart } from "./CartContext";
+import { useWishlist } from "./WishlistContext";
 
 export default function ProductCard({ product }: { product: Product }) {
   const router = useRouter();
   const { addItem } = useCart();
+  const { has, toggle } = useWishlist();
+  const liked = has(product.id);
   const cardRef = useRef<HTMLDivElement>(null);
   const glowRef = useRef<HTMLDivElement>(null);
   const shineRef = useRef<HTMLDivElement>(null);
@@ -74,7 +77,7 @@ export default function ProductCard({ product }: { product: Product }) {
           <img
             src={product.images[0]}
             alt={product.name}
-            className={`absolute inset-0 w-full h-full object-cover ${product.soldOut ? "grayscale opacity-60" : ""}`}
+            className="absolute inset-0 w-full h-full object-cover"
             style={{ transform: "translateZ(40px)" }}
           />
         )}
@@ -90,6 +93,19 @@ export default function ProductCard({ product }: { product: Product }) {
             Sold Out
           </span>
         )}
+
+        <button
+          aria-label={liked ? `Remove ${product.name} from wishlist` : `Add ${product.name} to wishlist`}
+          aria-pressed={liked}
+          onClick={(e) => { e.stopPropagation(); toggle(product.id); }}
+          onKeyDown={(e) => e.stopPropagation()}
+          className="absolute bottom-4 right-4 z-20 w-10 h-10 rounded-full bg-white/90 shadow-md flex items-center justify-center hover:scale-110 transition"
+          style={{ transform: "translateZ(80px)" }}
+        >
+          <svg viewBox="0 0 24 24" className="w-5 h-5" fill={liked ? "#dc2626" : "none"} stroke={liked ? "#dc2626" : "#0b1640"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+          </svg>
+        </button>
 
         <div ref={shineRef} className="absolute inset-0 pointer-events-none opacity-0 transition-opacity duration-200" style={{ transform: "translateZ(90px)", mixBlendMode: "overlay" }} />
 

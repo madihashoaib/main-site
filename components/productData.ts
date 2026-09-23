@@ -29,7 +29,7 @@ export type Product = {
 export const products: Product[] = [
   {
     id: "1",
-    name: "Antique Gold Floral Vine Dangle Earrings With Pink Pavé Blossom",
+    name: "Antique Gold Floral Dangle Earrings",
     category: "Earrings",
     price: "Rs. 1500",
     priceValue: 1500,
@@ -44,7 +44,7 @@ export const products: Product[] = [
   },
   {
     id: "2",
-    name: "Antique Gold Kundan Floral Vine Earrings And Tikka Set",
+    name: "Kundan Earrings And Tikka Set",
     category: "Earrings",
     price: "Rs. 1850",
     priceValue: 1850,
@@ -60,7 +60,7 @@ export const products: Product[] = [
   },
   {
     id: "3",
-    name: "Crown Motif Oval Halo Zircon Tennis Bracelet",
+    name: "Zircon Halo Tennis Bracelet",
     category: "Bracelet",
     price: "Rs. 1450",
     priceValue: 1450,
@@ -90,7 +90,7 @@ export const products: Product[] = [
   },
   {
     id: "5",
-    name: "Gold Pavé Floral Teardrop Dangle Earrings",
+    name: "Gold Floral Teardrop Earrings",
     category: "Earrings",
     price: "Rs. 1450",
     priceValue: 1450,
@@ -104,7 +104,7 @@ export const products: Product[] = [
   },
   {
     id: "6",
-    name: "Gold Tone Geometric Rectangular Bar Link Bracelet",
+    name: "Gold Bar Link Bracelet",
     category: "Bracelet",
     price: "Rs. 1400",
     priceValue: 1400,
@@ -119,7 +119,7 @@ export const products: Product[] = [
   },
   {
     id: "7",
-    name: "Golden Tone Geometric Rhombus Floral Dangle Earrings",
+    name: "Gold Rhombus Floral Earrings",
     category: "Earrings",
     price: "Rs. 1150",
     priceValue: 1150,
@@ -135,7 +135,7 @@ export const products: Product[] = [
   },
   {
     id: "8",
-    name: "Multicolor Zircon Cluster Cocktail Ring",
+    name: "Multicolor Zircon Cocktail Ring",
     category: "Ring",
     price: "Rs. 1350",
     priceValue: 1350,
@@ -149,7 +149,7 @@ export const products: Product[] = [
   },
   {
     id: "9",
-    name: "Pink And Champagne Floral Cluster Cocktail Ring",
+    name: "Pink Champagne Floral Cocktail Ring",
     category: "Ring",
     price: "Rs. 1000",
     priceValue: 1000,
@@ -163,7 +163,7 @@ export const products: Product[] = [
   },
   {
     id: "10",
-    name: "Rose Gold Champagne Zircon Solitaire With Pavé Cluster Ring",
+    name: "Rose Gold Champagne Solitaire Ring",
     category: "Ring",
     price: "Rs. 1500",
     priceValue: 1500,
@@ -178,7 +178,7 @@ export const products: Product[] = [
   },
   {
     id: "11",
-    name: "Rose Gold Red Zircon Solitaire With Pavé Cluster Ring",
+    name: "Rose Gold Red Solitaire Ring",
     category: "Ring",
     price: "Rs. 1500",
     priceValue: 1500,
@@ -194,7 +194,7 @@ export const products: Product[] = [
   },
   {
     id: "12",
-    name: "Silver Floral Pavé Zircon Drop Earrings With Purple Stone Cluster",
+    name: "Silver Purple Floral Drop Earrings",
     category: "Earrings",
     price: "Rs. 2250",
     priceValue: 2250,
@@ -208,7 +208,7 @@ export const products: Product[] = [
   },
   {
     id: "13",
-    name: "Silver Green Emerald Halo Stud Earrings And Ring Set",
+    name: "Emerald Halo Studs And Ring",
     category: "Earrings",
     price: "Rs. 1600",
     priceValue: 1600,
@@ -222,7 +222,7 @@ export const products: Product[] = [
   },
   {
     id: "14",
-    name: "Silver Pavé Floral Teardrop Dangle Earrings",
+    name: "Silver Floral Teardrop Earrings",
     category: "Earrings",
     price: "Rs. 1450",
     priceValue: 1450,
@@ -236,7 +236,7 @@ export const products: Product[] = [
   },
   {
     id: "15",
-    name: "Silver Solitaire Ring With Baguette Cut Zircon Band",
+    name: "Silver Baguette Solitaire Ring",
     category: "Ring",
     price: "Rs. 1150",
     priceValue: 1150,
@@ -249,7 +249,7 @@ export const products: Product[] = [
   },
   {
     id: "16",
-    name: "Silver Tone Geometric Rhombus Floral Dangle Earrings",
+    name: "Silver Rhombus Floral Earrings",
     category: "Earrings",
     price: "Rs. 1150",
     priceValue: 1150,
@@ -262,7 +262,7 @@ export const products: Product[] = [
   },
   {
     id: "17",
-    name: "Two Tone Zirconia Floral Earrings With Champagne Accents",
+    name: "Two Tone Floral Earrings",
     category: "Earrings",
     price: "Rs. 2250",
     priceValue: 2250,
@@ -299,7 +299,7 @@ export const products: Product[] = [
   // ===================================================================
   {
     id: "19",
-    name: "Gold Tone Pavé Lotus Flower Pendant, Earrings And Ring Set",
+    name: "Gold Lotus Flower Set",
     category: "Sets",
     price: "Rs. 3,000",
     priceValue: 3000,
@@ -314,7 +314,7 @@ export const products: Product[] = [
   },
   {
     id: "20",
-    name: "Silver Tone Black Square Zircon Halo Drop Necklace And Earrings Set",
+    name: "Black Zircon Necklace Set",
     category: "Sets",
     price: "Rs. 3,800",
     priceValue: 3800,
@@ -328,7 +328,7 @@ export const products: Product[] = [
   },
   {
     id: "21",
-    name: "Silver Tone Mint Green Zircon Heart Motif Necklace And Earrings Set",
+    name: "Mint Green Heart Necklace Set",
     category: "Sets",
     price: "Rs. 4,000",
     priceValue: 4000,
@@ -343,7 +343,7 @@ export const products: Product[] = [
   },
   {
     id: "22",
-    name: "Silver Tone Pavé Lotus Flower Pendant, Earrings And Ring Set",
+    name: "Silver Lotus Flower Set",
     category: "Sets",
     price: "Rs. 3,000",
     priceValue: 3000,
@@ -357,7 +357,7 @@ export const products: Product[] = [
   },
   {
     id: "23",
-    name: "Silver Tone Pavé Zircon Floral Cluster Necklace And Earrings Set",
+    name: "Silver Zircon Floral Necklace Set",
     category: "Sets",
     price: "Rs. 3,000",
     priceValue: 3000,
@@ -372,7 +372,7 @@ export const products: Product[] = [
   },
   {
     id: "24",
-    name: "Silver Tone Pavé Zircon Teardrop Pendant And Earrings Set",
+    name: "Silver Zircon Teardrop Pendant Set",
     category: "Sets",
     price: "Rs. 2,500",
     priceValue: 2500,
@@ -386,7 +386,7 @@ export const products: Product[] = [
   },
   {
     id: "25",
-    name: "Silver Tone Red Rectangular Zircon Halo Necklace And Earrings Set",
+    name: "Red Zircon Halo Necklace Set",
     category: "Sets",
     price: "Rs. 2,800",
     priceValue: 2800,
@@ -401,7 +401,7 @@ export const products: Product[] = [
   },
   {
     id: "26",
-    name: "Silver Tone White Rectangular Zircon Halo Necklace And Earrings Set",
+    name: "White Zircon Halo Necklace Set",
     category: "Sets",
     price: "Rs. 2,800",
     priceValue: 2800,
@@ -415,7 +415,7 @@ export const products: Product[] = [
   },
   {
     id: "27",
-    name: "Silver Tone Zircon Butterfly Wing Necklace And Earrings Set",
+    name: "Silver Butterfly Wing Necklace Set",
     category: "Sets",
     price: "Rs. 2,200",
     priceValue: 2200,
@@ -431,7 +431,7 @@ export const products: Product[] = [
   },
   {
     id: "28",
-    name: "Silver Tone Zircon Double Floral Cluster Bypass Adjustable Ring",
+    name: "Silver Zircon Floral Bypass Ring",
     category: "Ring",
     price: "Rs. 899",
     priceValue: 899,
@@ -445,7 +445,7 @@ export const products: Product[] = [
   },
   {
     id: "29",
-    name: "Silver Tone Zircon Floral Cluster Station Bracelet",
+    name: "Silver Zircon Floral Station Bracelet",
     category: "Bracelet",
     price: "Rs. 1,399",
     priceValue: 1399,
@@ -459,7 +459,7 @@ export const products: Product[] = [
   },
   {
     id: "30",
-    name: "floral-enamel-pave-pendant-set",
+    name: "Floral Enamel Pavé Pendant Set",
     category: "Sets",
     price: "Rs. 1,100",
     priceValue: 1100,
@@ -473,7 +473,7 @@ export const products: Product[] = [
   },
   {
     id: "31",
-    name: "marquise-feathered-swan-necklace",
+    name: "Marquise Feathered Swan Necklace",
     category: "Sets",
     price: "Rs. 699",
     priceValue: 699,
@@ -492,7 +492,7 @@ export const products: Product[] = [
   },
   {
     id: "32",
-    name: "multicolor-gemstone-huggie-hoops",
+    name: "Multicolor Gemstone Huggie Hoops",
     category: "Earrings",
     price: "Rs. 649",
     priceValue: 649,
@@ -507,7 +507,7 @@ export const products: Product[] = [
   },
   {
     id: "33",
-    name: "textured-gold-pave-open-cuff-ring",
+    name: "Textured Gold Pavé Cuff Ring",
     category: "Ring",
     price: "Rs. 599",
     priceValue: 599,
@@ -521,7 +521,7 @@ export const products: Product[] = [
   },
   {
     id: "34",
-    name: "Silver-leaf-vine-earrings",
+    name: "Silver Leaf Vine Earrings",
     category: "Earrings",
     price: "Rs. 1099",
     priceValue: 1099,
@@ -556,7 +556,7 @@ export const products: Product[] = [
   },
   {
     id: "36",
-    name: "Modern Minimalist Gold Ring Trio",
+    name: "Minimalist Gold Ring Trio",
     category: "Ring",
     price: "Rs. 999",
     priceValue: 999,
@@ -572,7 +572,7 @@ export const products: Product[] = [
   },
   {
     id: "37",
-    name: "Royal Blue Pure Zircon Statement Studs",
+    name: "Royal Blue Zircon Statement Studs",
     category: "Earrings",
     price: "Rs. 1,550",
     priceValue: 1550,
@@ -619,7 +619,7 @@ export const products: Product[] = [
   },
   {
     id: "40",
-    name: "Triple Tier Pink Zircon Charm Set",
+    name: "Triple Tier Pink Zircon Set",
     category: "Sets",
     price: "Rs. 1,899",
     priceValue: 1899,
@@ -662,7 +662,7 @@ export const products: Product[] = [
   },
   {
     id: "43",
-    name: "Gold Floral Pearl Statement Ring",
+    name: "Gold Floral Pearl Ring",
     category: "Ring",
     price: "Rs. 549",
     priceValue: 549,

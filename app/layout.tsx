@@ -5,6 +5,7 @@ import "./globals.css";
 import { AuthProvider } from "@/components/AuthContext";
 import { CartProvider } from "@/components/CartContext";
 import CartDrawer from "@/components/CartDrawer";
+import { WishlistProvider } from "@/components/WishlistContext";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -20,8 +21,8 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "adorn N adobe — Jewelry & Home Living",
-  description: "Handpicked jewelry and home living products designed for quiet luxury."
+   title: "adorn N adobe — Curated Jewelry",
+  description: "Curated jewelry designed for quiet luxury."
 };
 
 export default function RootLayout({
@@ -63,11 +64,13 @@ export default function RootLayout({
         {/* End Meta Pixel Code */}
 
         <AuthProvider>
-          <CartProvider>
-            {children}
-            <CartDrawer />
-          </CartProvider>
-        </AuthProvider>
+  <CartProvider>
+    <WishlistProvider>
+      {children}
+      <CartDrawer />
+    </WishlistProvider>
+  </CartProvider>
+</AuthProvider>
       </body>
     </html>
   );

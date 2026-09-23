@@ -18,12 +18,12 @@ const categories: CategoryTile[] = [
   },
   {
     name: "Bracelets",
-    image: "/images/products/Silver-Tone-Zircon-Floral-Cluster-Station-Bracelet-1.jpeg",
+    image: "/images/products/Crown-Motif-Oval-Halo-Zircon-Tennis-Bracelet-3.jpeg",
     href: "/shop?category=Bracelet"
   },
   {
     name: "Sets",
-    image: "/images/products/Silver-Tone-Zircon-Butterfly-Wing-Necklace-And-Earrings-Set-3.jpeg",
+    image: "/images/products/floral-enamel-pave-pendant-set-2.jpeg",
     href: "/shop?category=Sets"
   }
 ];

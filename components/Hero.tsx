@@ -55,7 +55,7 @@ export default function Hero() {
           near the top ============ */}
       <div className="relative z-10 max-w-2xl mx-auto px-6 pt-24 md:pt-28 pb-6 md:pb-10 text-center flex flex-col items-center">
         <span className="tracking-[5px] text-xs uppercase font-medium mb-5 inline-block" style={{ color: "#A8455A" }}>
-          Jewelry &amp; Home Living Products
+          Curated Jewelry Collection
         </span>
         <h1 className="font-serif italic font-medium text-navy-deep leading-[1.1] mb-8 text-[clamp(30px,4.4vw,50px)]">
           Adorn every{" "}
@@ -67,12 +67,12 @@ export default function Hero() {
         </h1>
 
         <div className="flex flex-wrap items-center justify-center gap-5">
-          <a
-            href="#collection"
-            className="inline-flex items-center gap-2 bg-gradient-to-br from-gold-light to-gold text-navy-deep font-semibold text-sm tracking-wider uppercase px-9 py-4 rounded-sm shadow-[0_12px_28px_rgba(201,162,39,0.3)] hover:-translate-y-1 hover:shadow-[0_18px_38px_rgba(201,162,39,0.4)] transition-all"
-          >
-            Shop Collection
-          </a>
+          <Link
+  href="/shop"
+  className="inline-flex items-center gap-2 bg-gradient-to-br from-gold-light to-gold text-navy-deep font-semibold text-sm tracking-wider uppercase px-9 py-4 rounded-sm shadow-[0_12px_28px_rgba(201,162,39,0.3)] hover:-translate-y-1 hover:shadow-[0_18px_38px_rgba(201,162,39,0.4)] transition-all"
+>
+  Shop Collection
+</Link>
 
           {/* quick category swatches — same hrefs used across the site */}
           <div className="flex items-center -space-x-3">

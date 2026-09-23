@@ -9,7 +9,7 @@ export default function Footer() {
             adorn <span className="text-gold-light">N</span> adobe
           </Link>
           <p className="mt-4 text-sm leading-7 text-white/50 max-w-[280px]">
-            Jewelry and home living products, designed for quiet elegance and everyday wear.
+            Curated jewelry, designed for quiet elegance and everyday wear.
           </p>
         </div>
         <div>
